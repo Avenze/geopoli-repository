@@ -1,0 +1,309 @@
+{
+    "nations": [
+        {
+            "members": [
+                "Mauricio Macri",
+                "Nicolas Dujovne",
+                "Guido Sandleris"
+            ],
+            "iso": "ARG",
+            "cities": [
+                "Buenos Aires",
+                "Mendoza",
+                "Cordoba"
+            ],
+            "cap": "Buenos Aires",
+            "name": "Argentina",
+            "hos": "Mauricio Macri"
+        },
+        {
+            "members": [
+                "Scott Morrison",
+                "Josh Frydenberg",
+                "Philip Lowe"
+            ],
+            "iso": "AUS",
+            "cities": [
+                "Canberra",
+                "Sydney",
+                "Melbourne"
+            ],
+            "cap": "Canberra",
+            "name": "Australia",
+            "hos": "Scott Morrison"
+        },
+        {
+            "members": [
+                "Jair Bolsonaro",
+                "Paulo Guedes",
+                "Roberto Campos Neto"
+            ],
+            "iso": "BRA",
+            "cities": [
+                "Brasilia",
+                "Rio de Janeiro",
+                "Sao Paulo"
+            ],
+            "cap": "Brasilia",
+            "name": "Brazil",
+            "hos": "Jair Bolsonaro"
+        },
+        {
+            "members": [
+                "Justin Trudeau",
+                "Bill Morneau",
+                "Stephen Poloz",
+                492435232071483392
+            ],
+            "iso": "CAN",
+            "cities": [
+                "Ottawa",
+                "Toronto",
+                "Vancouver"
+            ],
+            "cap": "Ottawa",
+            "name": "Canada",
+            "hos": "Justin Trudeau"
+        },
+        {
+            "members": [
+                "Xi Jinping",
+                "Liu Kun",
+                "Yi Gang"
+            ],
+            "iso": "CHN",
+            "cities": [
+                "Beijing",
+                "Shanghai",
+                "Nanjing"
+            ],
+            "cap": "Beijing",
+            "name": "China",
+            "hos": "Xi Jinping"
+        },
+        {
+            "members": [
+                "Emmanuel Macron",
+                "Bruno Le Maire",
+                "Francois Villeroy de Galhau"
+            ],
+            "iso": "FRA",
+            "cities": [
+                "Paris",
+                "Lyon",
+                "Marseille"
+            ],
+            "cap": "Paris",
+            "name": "France",
+            "hos": "Emmanuel Macron"
+        },
+        {
+            "members": [
+                "Angela Merkel",
+                "Olaf Scholz",
+                "Jens Weidmann"
+            ],
+            "iso": "DEU",
+            "cities": [
+                "Berlin",
+                "Munich",
+                "Hamburg"
+            ],
+            "cap": "Berlin",
+            "name": "Germany",
+            "hos": "Angela Merkel"
+        },
+        {
+            "members": [
+                "Narendra Modi",
+                "Nirmala Sitharaman",
+                "Shaktikanta Das"
+            ],
+            "iso": "IND",
+            "cities": [
+                "New Delhi",
+                "Delhi",
+                "Mumbai"
+            ],
+            "cap": "New Delhi",
+            "name": "India",
+            "hos": "Narendra Modi"
+        },
+        {
+            "members": [
+                "Joko Widodo",
+                "Sri Mulyani",
+                "Perry Warjiyo"
+            ],
+            "iso": "IDN",
+            "cities": [
+                "Jakarta",
+                "Bekasi",
+                "Medan"
+            ],
+            "cap": "Jakarta",
+            "name": "Indonesia",
+            "hos": "Joko Widodo"
+        },
+        {
+            "members": [
+                "Giuseppe Conte",
+                "Giovanni Tria",
+                "Ignazio Visco"
+            ],
+            "iso": "ITA",
+            "cities": [
+                "Rome",
+                "Milan",
+                "Turin"
+            ],
+            "cap": "Rome",
+            "name": "Italy",
+            "hos": "Giuseppe Conte"
+        },
+        {
+            "members": [
+                "Shinzo Abe",
+                "Taro Aso",
+                "Haruhiko Kuroda"
+            ],
+            "iso": "JPN",
+            "cities": [
+                "Tokyo",
+                "Osaka",
+                "Nagoya"
+            ],
+            "cap": "Tokyo",
+            "name": "Japan",
+            "hos": "Shinzo Abe"
+        },
+        {
+            "members": [
+                "Andres Manuel Lopez Obrador",
+                "Carlos Manuel Urzua Macias",
+                "Alejandro Diaz de Leon"
+            ],
+            "iso": "MEX",
+            "cities": [
+                "Mexico City",
+                "Tijuana",
+                "Puebla"
+            ],
+            "cap": "Mexico City",
+            "name": "Mexico",
+            "hos": "Andres Manuel Lopez Obrador"
+        },
+        {
+            "members": [
+                "Moon Jae-in",
+                "Hong Nam-ki",
+                "Lee Ju-yeol"
+            ],
+            "iso": "KOR",
+            "cities": [
+                "Seoul",
+                "Busan",
+                "Incheon"
+            ],
+            "cap": "Seoul",
+            "name": "Republic of Korea",
+            "hos": "Moon Jae-in"
+        },
+        {
+            "members": [
+                "Vladimir Putin",
+                "Anton Siluanov",
+                "Elvira Nabiullina"
+            ],
+            "iso": "RUS",
+            "cities": [
+                "Moscow",
+                "St. Petersburg",
+                "Novosibirsk"
+            ],
+            "cap": "Moscow",
+            "name": "Russia",
+            "hos": "Vladimir Putin"
+        },
+        {
+            "members": [
+                "Salman",
+                "Mohammed Al-Jadaan",
+                "Ahmed Abdulkarim Al-Khulaifi"
+            ],
+            "iso": "SAU",
+            "cities": [
+                "Riyadh",
+                "Jeddah",
+                "Medina"
+            ],
+            "cap": "Riyadh",
+            "name": "Saudi Arabia",
+            "hos": "Salman"
+        },
+        {
+            "members": [
+                "Cyril Ramaphosa",
+                "Tito Mboweni",
+                "Lesetja Kganyago"
+            ],
+            "iso": "ZAF",
+            "cities": [
+                "Cape Town",
+                "Pretoria",
+                "Bloemfontein"
+            ],
+            "cap": "Cape Town",
+            "name": "South Africa",
+            "hos": "Cyril Ramaphosa"
+        },
+        {
+            "members": [
+                "Recep Tayyip Erdogan",
+                "Berat Albayrak",
+                "Murat Cetinkaya"
+            ],
+            "iso": "TUR",
+            "cities": [
+                "Ankara",
+                "Istanbul",
+                "Izmir"
+            ],
+            "cap": "Ankara",
+            "name": "Turkey",
+            "hos": "Recep Tayyip Erdogan"
+        },
+        {
+            "members": [
+                "Theresa May",
+                "Philip Hammond",
+                "Mark Carney"
+            ],
+            "iso": "GBR",
+            "cities": [
+                "London",
+                "Birmingham",
+                "Manchester"
+            ],
+            "cap": "London",
+            "name": "United Kingdom",
+            "hos": "Theresa May"
+        },
+        {
+            "members": [
+                "Donald Trump",
+                "Steven Mnuchin",
+                "Jerome Powell"
+            ],
+            "iso": "USA",
+            "cities": [
+                "Washington D.C.",
+                "New York",
+                "Los Angeles"
+            ],
+            "cap": "Washington D.C.",
+            "name": "United States of America",
+            "hos": "Donald Trump"
+        }
+    ]
+}

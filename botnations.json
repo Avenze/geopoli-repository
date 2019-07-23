@@ -1,0 +1,156 @@
+{
+	"botnations": [
+		{
+			"name": "Argentina",
+			"hos": "Mauricio Macri",
+			"iso": "ARG",
+			"cap": "Buenos Aires",
+			"members": ["Mauricio Macri", "Nicolas Dujovne", "Guido Sandleris"],
+			"cities": ["Buenos Aires", "Mendoza", "Cordoba"]
+		},
+		{
+			"name": "Australia",
+			"hos": "Scott Morrison",
+			"iso": "AUS",
+			"cap": "Canberra",
+			"members": ["Scott Morrison", "Josh Frydenberg", "Philip Lowe"],
+			"cities": ["Canberra", "Sydney", "Melbourne"]
+		},
+		{
+			"name": "Brazil",
+			"hos": "Jair Bolsonaro",
+			"iso": "BRA",
+			"cap": "Brasilia",
+			"members": ["Jair Bolsonaro", "Paulo Guedes", "Roberto Campos Neto"],
+			"cities": ["Brasilia", "Rio de Janeiro", "Sao Paulo"]
+		},
+		{
+			"name": "Canada",
+			"hos": "Justin Trudeau",
+			"iso": "CAN",
+			"cap": "Ottawa",
+			"members": ["Justin Trudeau", "Bill Morneau", "Stephen Poloz"],
+			"cities": ["Ottawa", "Toronto", "Vancouver"]
+		},
+		{
+			"name": "China",
+			"hos": "Xi Jinping",
+			"iso": "CHN",
+			"cap": "Beijing",
+			"members": ["Xi Jinping", "Liu Kun", "Yi Gang"],
+			"cities": ["Beijing", "Shanghai", "Nanjing"]
+		},
+		{
+			"name": "France",
+			"hos": "Emmanuel Macron",
+			"iso": "FRA",
+			"cap": "Paris",
+			"members": ["Emmanuel Macron", "Bruno Le Maire", "Francois Villeroy de Galhau"],
+			"cities": ["Paris", "Lyon", "Marseille"]
+		},
+		{
+			"name": "Germany",
+			"hos": "Angela Merkel",
+			"iso": "DEU",
+			"cap": "Berlin",
+			"members": ["Angela Merkel", "Olaf Scholz", "Jens Weidmann"],
+			"cities": ["Berlin", "Munich", "Hamburg"]
+		},
+		{
+			"name": "India",
+			"hos": "Narendra Modi",
+			"iso": "IND",
+			"cap": "New Delhi",
+			"members": ["Narendra Modi", "Nirmala Sitharaman", "Shaktikanta Das"],
+			"cities": ["New Delhi", "Delhi", "Mumbai"]
+		},
+		{
+			"name": "Indonesia",
+			"hos": "Joko Widodo",
+			"iso": "IDN",
+			"cap": "Jakarta",
+			"members": ["Joko Widodo", "Sri Mulyani", "Perry Warjiyo"],
+			"cities": ["Jakarta", "Bekasi", "Medan"]
+		},
+		{
+			"name": "Italy",
+			"hos": "Giuseppe Conte",
+			"iso": "ITA",
+			"cap": "Rome",
+			"members": ["Giuseppe Conte", "Giovanni Tria", "Ignazio Visco"],
+			"cities": ["Rome", "Milan", "Turin"]
+		},
+		{
+			"name": "Japan",
+			"hos": "Shinzo Abe",
+			"iso": "JPN",
+			"cap": "Tokyo",
+			"members": ["Shinzo Abe", "Taro Aso", "Haruhiko Kuroda"],
+			"cities": ["Tokyo", "Osaka", "Nagoya"]
+		},
+		{
+			"name": "Mexico",
+			"hos": "Andres Manuel Lopez Obrador",
+			"iso": "MEX",
+			"cap": "Mexico City",
+			"members": ["Andres Manuel Lopez Obrador", "Carlos Manuel Urzua Macias", "Alejandro Diaz de Leon"],
+			"cities": ["Mexico City", "Tijuana", "Puebla"]
+		},
+		{
+			"name": "Republic of Korea",
+			"hos": "Moon Jae-in",
+			"iso": "KOR",
+			"cap": "Seoul",
+			"members": ["Moon Jae-in", "Hong Nam-ki", "Lee Ju-yeol"],
+			"cities": ["Seoul", "Busan", "Incheon"]
+		},
+		{
+			"name": "Russia",
+			"hos": "Vladimir Putin",
+			"iso": "RUS",
+			"cap": "Moscow",
+			"members": ["Vladimir Putin", "Anton Siluanov", "Elvira Nabiullina"],
+			"cities": ["Moscow", "St. Petersburg", "Novosibirsk"]
+		},
+		{
+			"name": "Saudi Arabia",
+			"hos": "Salman",
+			"iso": "SAU",
+			"cap": "Riyadh",
+			"members": ["Salman", "Mohammed Al-Jadaan", "Ahmed Abdulkarim Al-Khulaifi"],
+			"cities": ["Riyadh", "Jeddah", "Medina"]
+		},
+		{
+			"name": "South Africa",
+			"hos": "Cyril Ramaphosa",
+			"iso": "ZAF",
+			"cap": "Cape Town",
+			"members": ["Cyril Ramaphosa", "Tito Mboweni", "Lesetja Kganyago"],
+			"cities": ["Cape Town", "Pretoria", "Bloemfontein"]
+		},
+		{
+			"name": "Turkey",
+			"hos": "Recep Tayyip Erdogan",
+			"iso": "TUR",
+			"cap": "Ankara",
+			"members": ["Recep Tayyip Erdogan", "Berat Albayrak", "Murat Cetinkaya"],
+			"cities": ["Ankara", "Istanbul", "Izmir"]
+		},
+		{
+			"name": "United Kingdom",
+			"hos": "Theresa May",
+			"iso": "GBR",
+			"cap": "London",
+			"members": ["Theresa May", "Philip Hammond", "Mark Carney"],
+			"cities": ["London", "Birmingham", "Manchester"]
+		},
+		{
+			"name": "United States of America",
+			"hos": "Donald Trump",
+			"iso": "USA",
+			"cap": "Washington D.C.",
+			"members": ["Donald Trump", "Steven Mnuchin", "Jerome Powell"],
+			"cities": ["Washington D.C.", "New York", "Los Angeles"]
+		}
+	]
+}
