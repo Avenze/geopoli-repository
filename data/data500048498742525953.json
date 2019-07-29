@@ -1,0 +1,346 @@
+{
+    "nations": [
+        {
+            "iso": "ARG",
+            "cities": [
+                "Buenos Aires",
+                "Mendoza",
+                "Cordoba"
+            ],
+            "hos": "Mauricio Macri",
+            "name": "Argentina",
+            "members": [
+                "Mauricio Macri",
+                "Nicolas Dujovne",
+                "Guido Sandleris"
+            ],
+            "cap": "Buenos Aires"
+        },
+        {
+            "iso": "AUS",
+            "cities": [
+                "Canberra",
+                "Sydney",
+                "Melbourne"
+            ],
+            "hos": "Scott Morrison",
+            "name": "Australia",
+            "members": [
+                "Scott Morrison",
+                "Josh Frydenberg",
+                "Philip Lowe"
+            ],
+            "cap": "Canberra"
+        },
+        {
+            "iso": "BRA",
+            "cities": [
+                "Brasilia",
+                "Rio de Janeiro",
+                "Sao Paulo"
+            ],
+            "hos": "Jair Bolsonaro",
+            "name": "Brazil",
+            "members": [
+                "Jair Bolsonaro",
+                "Paulo Guedes",
+                "Roberto Campos Neto"
+            ],
+            "cap": "Brasilia"
+        },
+        {
+            "iso": "CAN",
+            "cities": [
+                "Ottawa",
+                "Toronto",
+                "Vancouver"
+            ],
+            "hos": "Justin Trudeau",
+            "name": "Canada",
+            "members": [
+                "Justin Trudeau",
+                "Bill Morneau",
+                "Stephen Poloz"
+            ],
+            "cap": "Ottawa"
+        },
+        {
+            "iso": "CHN",
+            "cities": [
+                "Beijing",
+                "Shanghai",
+                "Nanjing"
+            ],
+            "hos": "Xi Jinping",
+            "name": "China",
+            "members": [
+                "Xi Jinping",
+                "Liu Kun",
+                "Yi Gang"
+            ],
+            "cap": "Beijing"
+        },
+        {
+            "iso": "FRA",
+            "cities": [
+                "Paris",
+                "Lyon",
+                "Marseille"
+            ],
+            "hos": "Emmanuel Macron",
+            "name": "France",
+            "members": [
+                "Emmanuel Macron",
+                "Bruno Le Maire",
+                "Francois Villeroy de Galhau"
+            ],
+            "cap": "Paris"
+        },
+        {
+            "iso": "DEU",
+            "cities": [
+                "Berlin",
+                "Munich",
+                "Hamburg"
+            ],
+            "hos": "Angela Merkel",
+            "name": "Germany",
+            "members": [
+                "Angela Merkel",
+                "Olaf Scholz",
+                "Jens Weidmann"
+            ],
+            "cap": "Berlin"
+        },
+        {
+            "iso": "IND",
+            "cities": [
+                "New Delhi",
+                "Delhi",
+                "Mumbai"
+            ],
+            "hos": "Narendra Modi",
+            "name": "India",
+            "members": [
+                "Narendra Modi",
+                "Nirmala Sitharaman",
+                "Shaktikanta Das"
+            ],
+            "cap": "New Delhi"
+        },
+        {
+            "iso": "IDN",
+            "cities": [
+                "Jakarta",
+                "Bekasi",
+                "Medan"
+            ],
+            "hos": "Joko Widodo",
+            "name": "Indonesia",
+            "members": [
+                "Joko Widodo",
+                "Sri Mulyani",
+                "Perry Warjiyo"
+            ],
+            "cap": "Jakarta"
+        },
+        {
+            "iso": "ITA",
+            "cities": [
+                "Rome",
+                "Milan",
+                "Turin"
+            ],
+            "hos": "Giuseppe Conte",
+            "name": "Italy",
+            "members": [
+                "Giuseppe Conte",
+                "Giovanni Tria",
+                "Ignazio Visco"
+            ],
+            "cap": "Rome"
+        },
+        {
+            "iso": "JPN",
+            "cities": [
+                "Tokyo",
+                "Osaka",
+                "Nagoya"
+            ],
+            "hos": "Shinzo Abe",
+            "name": "Japan",
+            "members": [
+                "Shinzo Abe",
+                "Taro Aso",
+                "Haruhiko Kuroda"
+            ],
+            "cap": "Tokyo"
+        },
+        {
+            "iso": "MEX",
+            "cities": [
+                "Mexico City",
+                "Tijuana",
+                "Puebla"
+            ],
+            "hos": "Andres Manuel Lopez Obrador",
+            "name": "Mexico",
+            "members": [
+                "Andres Manuel Lopez Obrador",
+                "Carlos Manuel Urzua Macias",
+                "Alejandro Diaz de Leon"
+            ],
+            "cap": "Mexico City"
+        },
+        {
+            "iso": "KOR",
+            "cities": [
+                "Seoul",
+                "Busan",
+                "Incheon"
+            ],
+            "hos": "Moon Jae-in",
+            "name": "Republic of Korea",
+            "members": [
+                "Moon Jae-in",
+                "Hong Nam-ki",
+                "Lee Ju-yeol"
+            ],
+            "cap": "Seoul"
+        },
+        {
+            "iso": "RUS",
+            "cities": [
+                "Moscow",
+                "St. Petersburg",
+                "Novosibirsk"
+            ],
+            "hos": "Vladimir Putin",
+            "name": "Russia",
+            "members": [
+                "Vladimir Putin",
+                "Anton Siluanov",
+                "Elvira Nabiullina",
+                176434344506687489
+            ],
+            "cap": "Moscow"
+        },
+        {
+            "iso": "SAU",
+            "cities": [
+                "Riyadh",
+                "Jeddah",
+                "Medina"
+            ],
+            "hos": "Salman",
+            "name": "Saudi Arabia",
+            "members": [
+                "Salman",
+                "Mohammed Al-Jadaan",
+                "Ahmed Abdulkarim Al-Khulaifi"
+            ],
+            "cap": "Riyadh"
+        },
+        {
+            "iso": "ZAF",
+            "cities": [
+                "Cape Town",
+                "Pretoria",
+                "Bloemfontein"
+            ],
+            "hos": "Cyril Ramaphosa",
+            "name": "South Africa",
+            "members": [
+                "Cyril Ramaphosa",
+                "Tito Mboweni",
+                "Lesetja Kganyago"
+            ],
+            "cap": "Cape Town"
+        },
+        {
+            "iso": "TUR",
+            "cities": [
+                "Ankara",
+                "Istanbul",
+                "Izmir"
+            ],
+            "hos": "Recep Tayyip Erdogan",
+            "name": "Turkey",
+            "members": [
+                "Recep Tayyip Erdogan",
+                "Berat Albayrak",
+                "Murat Cetinkaya"
+            ],
+            "cap": "Ankara"
+        },
+        {
+            "iso": "GBR",
+            "cities": [
+                "London",
+                "Birmingham",
+                "Manchester"
+            ],
+            "hos": "Theresa May",
+            "name": "United Kingdom",
+            "members": [
+                "Theresa May",
+                "Philip Hammond",
+                "Mark Carney"
+            ],
+            "cap": "London"
+        },
+        {
+            "iso": "USA",
+            "cities": [
+                "Washington D.C.",
+                "New York",
+                "Los Angeles"
+            ],
+            "hos": "Donald Trump",
+            "name": "United States of America",
+            "members": [
+                "Donald Trump",
+                "Steven Mnuchin",
+                "Jerome Powell"
+            ],
+            "cap": "Washington D.C."
+        },
+        {
+            "iso": "PSA",
+            "cities": [
+                "Persiaville"
+            ],
+            "hos": 229064601558319104,
+            "name": "Persia",
+            "members": [
+                229064601558319104
+            ],
+            "cap": "Persiaville"
+        },
+        {
+            "iso": "AES",
+            "cities": [
+                "Aztecs Town"
+            ],
+            "hos": 176412117430304768,
+            "name": "Aztecs",
+            "members": [
+                176412117430304768
+            ],
+            "cap": "Aztecs Town"
+        },
+        {
+            "iso": "KEV",
+            "cities": [
+                "Kevietnamjing"
+            ],
+            "hos": 492435232071483392,
+            "descrip": "Kevietnam is the nation of math. Math is fun and math is cool. Gamers only.",
+            "name": "Kevietnam",
+            "members": [
+                492435232071483392
+            ],
+            "cap": "Kevietnamjing"
+        }
+    ]
+}

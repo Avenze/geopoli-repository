@@ -3,8 +3,10 @@ from discord.ext import commands
 import os
 import random
 import json
+from auth import token
 from textedit import titleCase, setISO, numbered
 import wiki
+from exch import getExchangeRatesUSD, getExchangeRatesEUR
 
 bot = commands.Bot(command_prefix='.')
 
@@ -25,6 +27,23 @@ def valExists(ctx, atr, val):
                     return True
     return False
 
+def updateData():
+    if os.path.exists('data/data'+str(ctx.guild.id)+'.json'):
+        with open('data/data'+str(ctx.guild.id)+'.json', 'r') as f:
+            data = json.load(f)
+            ratesUSD = getExchangeRatesUSD['rates']
+            ratesEUR = getExchangeRatesEUR['rates']
+            for n in data['nations']:
+                if str(n['hos']).isalpha() and 'curr' in n:
+                    if n['curr'] in ratesUSD:
+                        n['usd'] = ratesUSD[n['curr']]
+                    elif n['curr'] == 'USD':
+                        n['usd'] = 1
+                    if n['curr'] in ratesEUR:
+                        n['eur'] = ratesEUR[n['curr']]
+                    elif n['curr'] == 'EUR':
+                        n['eur'] = 1
+
 @bot.command()
 async def dawn(ctx):
     if not os.path.exists('data/data'+str(ctx.guild.id)+'.json'):
@@ -41,19 +60,13 @@ async def dawn(ctx):
                     json.dump(data, f, indent=4)
         await ctx.send('The dawn of civilization in '+ctx.guild.name+' has begun...')
         embed = discord.Embed(title="GEOPOLI", description="The Geopolitical Simulation Bot", color=0xeee657)
-        embed.add_field(name=".help", value="Gets the command instructions", inline=False)
+        embed.add_field(name=".help", value="Gets a full list of command instructions", inline=False)
         embed.add_field(name=".establish <nation-name>", value="Establishes a new nation", inline=False)
         embed.add_field(name=".join <nation-name>", value="Joins an existing nation", inline=False)
         embed.add_field(name=".leave <nation-name>", value="Leaves current nation", inline=False)
         embed.add_field(name=".world", value="Views the current world stage", inline=False)
         embed.add_field(name=".passport", value="Views your passport", inline=False)
         embed.add_field(name=".profile <nation-name>", value="Displays the profile of a nation", inline=False)
-        embed.add_field(name=".citizens <nation-name>", value="Lists the citizens of a nation in chronological order", inline=False)
-        embed.add_field(name=".cities <nation-name>", value="Lists the cities of a nation in chronological order", inline=False)
-        embed.add_field(name=".set description <nation-name> <description>", value="Change nation description", inline=False)
-        embed.add_field(name=".set iso <nation-name> <iso>", value="Change nation ISO code", inline=False)
-        embed.add_field(name=".set capital <nation-name> <city>", value="Change nation capital city", inline=False)
-        embed.add_field(name=".set city <nation-name> <city>", value="Adds a city to your country", inline=False)
 
         await ctx.send(embed=embed)
     else:
@@ -348,7 +361,7 @@ async def passport(ctx):
             await ctx.send(ctx.message.author.display_name+'! You are currently stateless.') 
     else:
         await ctx.send(ctx.message.author.display_name+'! Civilization has yet to be dawned.')
-               
+            
 @bot.command()
 async def ping(ctx):
     await ctx.send('pong')
@@ -362,7 +375,7 @@ async def help(ctx):
         embed.add_field(name=".dawn", value="Starts the simulation", inline=False)
     else:
         embed = discord.Embed(title="Geopoli", description="The Geopolitical Simulation Bot", color=0xeee657)
-        embed.add_field(name=".help", value="Gets the command instructions", inline=False)
+        embed.add_field(name=".help", value="Gets a full list of command instructions", inline=False)
         embed.add_field(name=".establish <nation-name>", value="Establishes a new nation", inline=False)
         embed.add_field(name=".join <nation-name>", value="Joins an existing nation", inline=False)
         embed.add_field(name=".leave <nation-name>", value="Leaves current nation", inline=False)
@@ -375,7 +388,8 @@ async def help(ctx):
         embed.add_field(name=".set iso <nation-name> <iso>", value="Change nation ISO code", inline=False)
         embed.add_field(name=".set capital <nation-name> <city>", value="Change nation capital city", inline=False)
         embed.add_field(name=".set city <nation-name> <city>", value="Adds a city to your country", inline=False)
-    await ctx.send(embed=embed)
+        embed.add_field(name=".bank <nation-name>", value="Views the central bank of a nation", inline=False)
+    await ctx.message.author.send(embed=embed)
 
 @bot.event
 async def on_ready():
