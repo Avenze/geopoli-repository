@@ -21,3 +21,4 @@ Geopolitical economic Discord bot, fun
  * `.set capital <nation-name> <city>`: Change nation capital city
  * `.set city <nation-name> <city>`: Adds a city to your country
  * `.bank <nation-name>`: Views the financial information of a nation
+ * `.economy`: Views historical financial information of the current world stage
