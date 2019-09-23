@@ -1,4 +1,5 @@
 import requests
+import json
 
 def getExchangeRatesUSD():
     api_url = 'https://api.exchangeratesapi.io/latest?base=USD&symbols=AUD,BRL,CAD,CNY,EUR,INR,IDR,JPY,MXN,KRW,RUB,ZAR,TRY,GBP'

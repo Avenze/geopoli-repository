@@ -4,7 +4,7 @@ import os
 import random
 import json
 from auth import token
-from textedit import titleCase, setISO, numbered
+from format import titleCase, setISO, numbered
 import wiki
 from exch import getExchangeRatesUSD, getExchangeRatesEUR
 
@@ -27,23 +27,6 @@ def valExists(ctx, atr, val):
                     return True
     return False
 
-def updateData():
-    if os.path.exists('data/data'+str(ctx.guild.id)+'.json'):
-        with open('data/data'+str(ctx.guild.id)+'.json', 'r') as f:
-            data = json.load(f)
-            ratesUSD = getExchangeRatesUSD['rates']
-            ratesEUR = getExchangeRatesEUR['rates']
-            for n in data['nations']:
-                if str(n['hos']).isalpha() and 'curr' in n:
-                    if n['curr'] in ratesUSD:
-                        n['usd'] = ratesUSD[n['curr']]
-                    elif n['curr'] == 'USD':
-                        n['usd'] = 1
-                    if n['curr'] in ratesEUR:
-                        n['eur'] = ratesEUR[n['curr']]
-                    elif n['curr'] == 'EUR':
-                        n['eur'] = 1
-
 @bot.command()
 async def dawn(ctx):
     if not os.path.exists('data/data'+str(ctx.guild.id)+'.json'):
@@ -61,12 +44,6 @@ async def dawn(ctx):
         await ctx.send('The dawn of civilization in '+ctx.guild.name+' has begun...')
         embed = discord.Embed(title="GEOPOLI", description="The Geopolitical Simulation Bot", color=0xeee657)
         embed.add_field(name=".help", value="Gets a full list of command instructions", inline=False)
-        embed.add_field(name=".establish <nation-name>", value="Establishes a new nation", inline=False)
-        embed.add_field(name=".join <nation-name>", value="Joins an existing nation", inline=False)
-        embed.add_field(name=".leave <nation-name>", value="Leaves current nation", inline=False)
-        embed.add_field(name=".world", value="Views the current world stage", inline=False)
-        embed.add_field(name=".passport", value="Views your passport", inline=False)
-        embed.add_field(name=".profile <nation-name>", value="Displays the profile of a nation", inline=False)
 
         await ctx.send(embed=embed)
     else:
@@ -207,12 +184,13 @@ async def world(ctx):
         with open('data/data'+str(ctx.guild.id)+'.json', 'r') as f:
             data = json.load(f)
             bots = 0
+            sortnations = []
             for n in data['nations']:
-                if str(n['hos']).isdigit():
-                    stage += ' - '+n['name']+'\n'
-                else:
-                    bots += 1
-            stage += '\n('+str(bots)+' hidden bot nations)```'
+                sortnations.append(n['name'])
+            sortnations.sort()
+            for s in sortnations:
+                stage += ' - '+s+'\n'
+            stage += '```'
         await ctx.send(stage)
     else:
         await ctx.send(ctx.message.author.display_name+'! Civilization has yet to be dawned.')
@@ -361,7 +339,30 @@ async def passport(ctx):
             await ctx.send(ctx.message.author.display_name+'! You are currently stateless.') 
     else:
         await ctx.send(ctx.message.author.display_name+'! Civilization has yet to be dawned.')
-            
+
+@bot.command()
+async def bank(ctx, nation:str):
+    if os.path.exists('data/data'+str(ctx.guild.id)+'.json'):
+        try:
+            stage = ''
+            with open('data/data'+str(ctx.guild.id)+'.json', 'r') as f:
+                data = json.load(f)
+                for n in data['nations']:
+                    if n['name'] == titleCase(nation):
+                        stage = '```'+n['bank']+'\n1 USD is '+str(n['usd'])+' '+n['curr']+'.\n1 EUR is '+str(n['eur'])+' '+n['curr']+'```'
+                        await ctx.send(stage) 
+                        return
+            await ctx.send(ctx.message.author.display_name+'! This nation does not exist.') 
+        except ValueError:
+            await ctx.send(ctx.message.author.display_name+'! This nation does not exist.') 
+    else:
+        await ctx.send(ctx.message.author.display_name+'! Civilization has yet to be dawned.')
+
+@bot.command()
+async def icon(ctx):
+    with open('geopoli.jpg', 'rb') as picture:
+        await ctx.send(file=discord.File(picture, 'geopoli.jpg'))
+
 @bot.command()
 async def ping(ctx):
     await ctx.send('pong')
@@ -388,7 +389,7 @@ async def help(ctx):
         embed.add_field(name=".set iso <nation-name> <iso>", value="Change nation ISO code", inline=False)
         embed.add_field(name=".set capital <nation-name> <city>", value="Change nation capital city", inline=False)
         embed.add_field(name=".set city <nation-name> <city>", value="Adds a city to your country", inline=False)
-        embed.add_field(name=".bank <nation-name>", value="Views the central bank of a nation", inline=False)
+        embed.add_field(name=".bank <nation-name>", value="Views the financial information of a nation", inline=False)
     await ctx.message.author.send(embed=embed)
 
 @bot.event
