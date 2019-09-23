@@ -282,7 +282,7 @@ async def set(ctx, item:str, nation:str, content:str):
                 with open('data/data'+str(ctx.guild.id)+'.json', 'r') as f:
                     data = json.load(f)
                     for n in data['nations']:
-                        if n['name'] == titleCase(nation) and n['hos'] == ctx.message.author.id:
+                        if n['name'] == titleCase(nation) and n['hos'] == ctx.message.author.id and titleCase(content) in n['cities']:
                             n['cap'] = titleCase(content)
                             f.close()
                             os.remove('data/data'+str(ctx.guild.id)+'.json')
@@ -315,6 +315,8 @@ async def set(ctx, item:str, nation:str, content:str):
             await ctx.send(ctx.message.author.display_name+'! This nation does not exist.')
     else:
         await ctx.send(ctx.message.author.display_name+'! Civilization has yet to be dawned.')
+
+
 
 @bot.command()
 async def passport(ctx):
@@ -364,6 +366,14 @@ async def icon(ctx):
         await ctx.send(file=discord.File(picture, 'geopoli.jpg'))
 
 @bot.command()
+async def economy(ctx):
+    bases = ['USD', 'USD', 'EUR', 'EUR']
+    for i in range(4):
+        with open('img/rates'+str(i)+'.png', 'rb') as picture:
+            await ctx.send('Currency exchange rates ('+bases[i]+')')
+            await ctx.send(file=discord.File(picture, bases[i]+'.png'))
+
+@bot.command()
 async def ping(ctx):
     await ctx.send('pong')
 
@@ -390,6 +400,7 @@ async def help(ctx):
         embed.add_field(name=".set capital <nation-name> <city>", value="Change nation capital city", inline=False)
         embed.add_field(name=".set city <nation-name> <city>", value="Adds a city to your country", inline=False)
         embed.add_field(name=".bank <nation-name>", value="Views the financial information of a nation", inline=False)
+        embed.add_field(name=".economy", value="Views historical financial information of the current world stage", inline=False)
     await ctx.message.author.send(embed=embed)
 
 @bot.event
