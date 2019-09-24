@@ -15,4 +15,3 @@ ZAF
 TUR
 GBR
 USA
-TLD

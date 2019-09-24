@@ -40,7 +40,16 @@ async def dawn(ctx):
                 f.write(bn['iso']+'\n')
             f.close()
             with open('data/data'+str(ctx.guild.id)+'.json', 'w') as f:
-                    json.dump(data, f, indent=4)
+                json.dump(data, f, indent=4)
+        userdata = {}
+        userdata['users'] = []
+        for member in ctx.guild.members:
+            userdata['users'].append({'id':member.id,'balance':{
+            'USD':10000, 'EUR':0, 'CNY':0, 'RUB':0, 'MXN':0, 'TRY':0, 'INR':0, 'GBP':0, 
+            'KRW':0, 'BRL':0, 'ZAR':0, 'AUD':0, 'JPY':0, 'CAD':0, 'IDR':0
+        }})
+        with open('data/users/users'+str(ctx.guild.id)+'.json', 'w') as f:
+            json.dump(userdata, f, indent=4)
         await ctx.send('The dawn of civilization in '+ctx.guild.name+' has begun...')
         embed = discord.Embed(title="GEOPOLI", description="The Geopolitical Simulation Bot", color=0xeee657)
         embed.add_field(name=".help", value="Gets a full list of command instructions", inline=False)
@@ -372,6 +381,37 @@ async def economy(ctx):
         with open('img/rates'+str(i)+'.png', 'rb') as picture:
             await ctx.send('Currency exchange rates ('+bases[i]+')')
             await ctx.send(file=discord.File(picture, bases[i]+'.png'))
+
+@bot.command()
+async def portfolio(ctx):
+    if os.path.exists('data/data'+str(ctx.guild.id)+'.json'):
+        if valExists(ctx, 'members', ctx.message.author.id):
+            with open('data/users/users'+str(ctx.guild.id)+'.json', 'r') as f:
+                data = json.load(f)
+                for u in data['users']:
+                    if ctx.message.author.id == u['id']:
+                        pf = '```'
+                        with open('data/data'+str(ctx.guild.id)+'.json', 'r') as nf:
+                            nations = json.load(nf)
+                            for n in nations['nations']:
+                                if ctx.message.author.id in n['members']:
+                                    pf += ctx.message.author.display_name.upper()+', '+n['bank'].upper()+'\n'
+                        with open('dataRecord.json', 'r') as rf:
+                            rates = json.load(rf)
+                            networth = 0
+                            networth_e = 0
+                            ratelist = list(rates['usd'][len(rates)-1]['rates'].keys())
+                            for r in range(len(ratelist)):
+                                networth += u['balance'][ratelist[r]]/rates['usd'][len(rates)-1]['rates'][ratelist[r]]
+                                networth_e += u['balance'][ratelist[r]]/rates['eur'][len(rates)-1]['rates'][ratelist[r]]
+                                pf += str(u['balance'][ratelist[r]])+' '+ratelist[r]+'\n'
+                            pf += 'Networth (USD): '+str(round(networth, 2))+'\nNetworth (EUR): '+str(round(networth_e, 2))+'```'
+                        await ctx.send(pf)
+                        return
+        else:
+            await ctx.send(ctx.message.author.display_name+'! You are currently stateless.') 
+    else:
+        await ctx.send(ctx.message.author.display_name+'! Civilization has yet to be dawned.')
 
 @bot.command()
 async def ping(ctx):
