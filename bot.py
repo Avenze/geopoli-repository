@@ -408,7 +408,7 @@ async def portfolio(ctx):
                                 networth += u['balance'][ratelist[r]]/rates['usd'][len(rates)-1]['rates'][ratelist[r]]
                                 networth_e += u['balance'][ratelist[r]]/rates['eur'][len(rates)-1]['rates'][ratelist[r]]
                                 if u['balance'][ratelist[r]]>0:
-                                    pf += str(u['balance'][ratelist[r]])+' '+ratelist[r]+'\n'
+                                    pf += str(round(u['balance'][ratelist[r]], 2))+' '+ratelist[r]+'\n'
                             pf += 'Networth (USD): '+str(round(networth, 2))+'\nNetworth (EUR): '+str(round(networth_e, 2))+'```'
                         await ctx.send(pf)
                         return
@@ -438,9 +438,9 @@ async def buy(ctx, src:str, dest:str, amount:float):
                             if src in list(u['balance'].keys()) and dest in list(u['balance'].keys()):
                                 total_src = u['balance'][src]
                                 src_rate = rates['usd'][len(rates)-1]['rates'][src]
-                                total_dest = u['balance'][src]
-                                dest_rate = rates['usd'][len(rates)-1]['rates'][src] 
-                                if total_src <= amount/dest_rate * src_rate:
+                                total_dest = u['balance'][dest]
+                                dest_rate = rates['usd'][len(rates)-1]['rates'][dest] 
+                                if total_src >= amount/dest_rate * src_rate:
                                     u['balance'][src] -= amount/dest_rate * src_rate
                                     u['balance'][dest] += amount
                                 else:
@@ -449,9 +449,10 @@ async def buy(ctx, src:str, dest:str, amount:float):
                             else:
                                 await ctx.send('Error in processing request: one of those currencies is non-existent.')
                                 return
+                        f.close()
                         os.remove('data/users/users'+str(ctx.guild.id)+'.json')
                         with open('data/users/users'+str(ctx.guild.id)+'.json', 'w') as ff:
-                            json.dump(u, ff, indent=4)
+                            json.dump(data, ff, indent=4)
                         await ctx.send(ctx.message.author.display_name+"! Transaction success!")
                         return
         else:
