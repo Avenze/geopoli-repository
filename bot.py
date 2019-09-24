@@ -67,6 +67,7 @@ async def establish(ctx, nation:str):
                 iso = setISO(nation, currISO)
                 city = titleCase(nation)+random.choice([' City', 'shire', ' Town', 'berg', 'borough', 'grad',
                                                                    'jing', 'kyo', 'ville', 'field', 'view', 'town', 'fast'])
+                bank = 'Bank of '+titleCase(nation)
                 if ctx.message.author.bot:
                     hos = ctx.message.author.display_name
                 else:
@@ -80,7 +81,8 @@ async def establish(ctx, nation:str):
                             'hos':hos,
                             'members':[ctx.message.author.id],
                             'cap':city,
-                            'cities':[city]
+                            'cities':[city],
+                            'bank':bank
                             })
                 except ValueError:
                     data = {}
@@ -91,7 +93,8 @@ async def establish(ctx, nation:str):
                             'hos':hos,
                             'members':[ctx.message.author.id],
                             'cap':city,
-                            'cities':[city]
+                            'cities':[city],
+                            'bank':bank
                             })
                 f = open('data/isolog'+str(ctx.guild.id)+'.txt', 'a')
                 f.write(iso+'\n')
@@ -404,9 +407,52 @@ async def portfolio(ctx):
                             for r in range(len(ratelist)):
                                 networth += u['balance'][ratelist[r]]/rates['usd'][len(rates)-1]['rates'][ratelist[r]]
                                 networth_e += u['balance'][ratelist[r]]/rates['eur'][len(rates)-1]['rates'][ratelist[r]]
-                                pf += str(u['balance'][ratelist[r]])+' '+ratelist[r]+'\n'
+                                if u['balance'][ratelist[r]]>0:
+                                    pf += str(u['balance'][ratelist[r]])+' '+ratelist[r]+'\n'
                             pf += 'Networth (USD): '+str(round(networth, 2))+'\nNetworth (EUR): '+str(round(networth_e, 2))+'```'
                         await ctx.send(pf)
+                        return
+        else:
+            await ctx.send(ctx.message.author.display_name+'! You are currently stateless.') 
+    else:
+        await ctx.send(ctx.message.author.display_name+'! Civilization has yet to be dawned.')
+
+@bot.command()
+async def buy(ctx, src:str, dest:str, amount:float):
+    src = src.upper()
+    dest = dest.upper()
+    if os.path.exists('data/data'+str(ctx.guild.id)+'.json'):
+        if valExists(ctx, 'members', ctx.message.author.id):
+            with open('data/users/users'+str(ctx.guild.id)+'.json', 'r') as f:
+                data = json.load(f)
+                for u in data['users']:
+                    if ctx.message.author.id == u['id']:
+                        pf = '```'
+                        with open('data/data'+str(ctx.guild.id)+'.json', 'r') as nf:
+                            nations = json.load(nf)
+                            for n in nations['nations']:
+                                if ctx.message.author.id in n['members']:
+                                    pf += ctx.message.author.display_name.upper()+', '+n['bank'].upper()+'\n'
+                        with open('dataRecord.json', 'r') as rf:
+                            rates = json.load(rf)
+                            if src in list(u['balance'].keys()) and dest in list(u['balance'].keys()):
+                                total_src = u['balance'][src]
+                                src_rate = rates['usd'][len(rates)-1]['rates'][src]
+                                total_dest = u['balance'][src]
+                                dest_rate = rates['usd'][len(rates)-1]['rates'][src] 
+                                if total_src <= amount/dest_rate * src_rate:
+                                    u['balance'][src] -= amount/dest_rate * src_rate
+                                    u['balance'][dest] += amount
+                                else:
+                                    await ctx.send("Sorry "+ctx.message.author.display_name+", you do not have enough "+src+" to make that transaction.")
+                                    return
+                            else:
+                                await ctx.send('Error in processing request: one of those currencies is non-existent.')
+                                return
+                        os.remove('data/users/users'+str(ctx.guild.id)+'.json')
+                        with open('data/users/users'+str(ctx.guild.id)+'.json', 'w') as ff:
+                            json.dump(u, ff, indent=4)
+                        await ctx.send(ctx.message.author.display_name+"! Transaction success!")
                         return
         else:
             await ctx.send(ctx.message.author.display_name+'! You are currently stateless.') 
