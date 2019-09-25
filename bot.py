@@ -490,6 +490,8 @@ async def help(ctx):
         embed.add_field(name=".set city <nation-name> <city>", value="Adds a city to your country", inline=False)
         embed.add_field(name=".bank <nation-name>", value="Views the financial information of a nation", inline=False)
         embed.add_field(name=".economy", value="Views historical financial information of the current world stage", inline=False)
+        embed.add_field(name=".portfolio", value="Views personal financial information", inline=False)
+        embed.add_field(name=".buy <desposited-currency> <withdrawn-currency> <amount-withdrawn>", value="Exchanges currency", inline=False)
     await ctx.message.author.send(embed=embed)
 
 @bot.event
