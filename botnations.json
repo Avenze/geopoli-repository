@@ -1,344 +1,344 @@
 {
     "botnations": [
         {
-            "eur": 1.6224,
-            "usd": 1.4769230769,
-            "cities": [
-                "Canberra",
-                "Sydney",
-                "Melbourne"
-            ],
-            "hos": "Scott Morrison",
-            "cap": "Canberra",
-            "bank": "Reserve Bank of Australia",
-            "iso": "AUS",
-            "name": "Australia",
             "members": [
                 "Scott Morrison",
                 "Josh Frydenberg",
                 "Philip Lowe"
             ],
-            "curr": "AUD"
+            "bank": "Reserve Bank of Australia",
+            "name": "Australia",
+            "usd": 1.4784192315,
+            "cap": "Canberra",
+            "hos": "Scott Morrison",
+            "eur": 1.6236,
+            "cities": [
+                "Canberra",
+                "Sydney",
+                "Melbourne"
+            ],
+            "curr": "AUD",
+            "iso": "AUS"
         },
         {
-            "eur": 4.5665,
-            "usd": 4.1570323168,
-            "cities": [
-                "Brasilia",
-                "Rio de Janeiro",
-                "Sao Paulo"
-            ],
-            "hos": "Jair Bolsonaro",
-            "cap": "Brasilia",
-            "bank": "Central Bank of Brazil",
-            "iso": "BRA",
-            "name": "Brazil",
             "members": [
                 "Jair Bolsonaro",
                 "Paulo Guedes",
                 "Roberto Campos Neto"
             ],
-            "curr": "BRL"
+            "bank": "Central Bank of Brazil",
+            "name": "Brazil",
+            "usd": 4.1874886177,
+            "cap": "Brasilia",
+            "hos": "Jair Bolsonaro",
+            "eur": 4.5987,
+            "cities": [
+                "Brasilia",
+                "Rio de Janeiro",
+                "Sao Paulo"
+            ],
+            "curr": "BRL",
+            "iso": "BRA"
         },
         {
-            "eur": 1.4586,
-            "usd": 1.3278106509,
-            "cities": [
-                "Ottawa",
-                "Toronto",
-                "Vancouver"
-            ],
-            "hos": "Justin Trudeau",
-            "cap": "Ottawa",
-            "bank": "Bank of Canada",
-            "iso": "CAN",
-            "name": "Canada",
             "members": [
                 "Justin Trudeau",
                 "Bill Morneau",
                 "Stephen Poloz"
             ],
-            "curr": "CAD"
+            "bank": "Bank of Canada",
+            "name": "Canada",
+            "usd": 1.327627026,
+            "cap": "Ottawa",
+            "hos": "Justin Trudeau",
+            "eur": 1.458,
+            "cities": [
+                "Ottawa",
+                "Toronto",
+                "Vancouver"
+            ],
+            "curr": "CAD",
+            "iso": "CAN"
         },
         {
-            "eur": 7.8279,
-            "usd": 7.1259899863,
-            "cities": [
-                "Beijing",
-                "Shanghai",
-                "Nanjing"
-            ],
-            "hos": "Xi Jinping",
-            "cap": "Beijing",
-            "bank": "People's Bank of China",
-            "iso": "CHN",
-            "name": "China",
             "members": [
                 "Xi Jinping",
                 "Liu Kun",
                 "Yi Gang"
             ],
-            "curr": "CNY"
+            "bank": "People's Bank of China",
+            "name": "China",
+            "usd": 7.1242942998,
+            "cap": "Beijing",
+            "hos": "Xi Jinping",
+            "eur": 7.8239,
+            "cities": [
+                "Beijing",
+                "Shanghai",
+                "Nanjing"
+            ],
+            "curr": "CNY",
+            "iso": "CHN"
         },
         {
-            "eur": 1,
-            "usd": 0.9103322713,
-            "cities": [
-                "Paris",
-                "Lyon",
-                "Marseille"
-            ],
-            "hos": "Emmanuel Macron",
-            "cap": "Paris",
-            "bank": "Bank of France",
-            "iso": "FRA",
-            "name": "France",
             "members": [
                 "Emmanuel Macron",
                 "Bruno Le Maire",
                 "Francois Villeroy de Galhau"
             ],
-            "curr": "EUR"
+            "bank": "Bank of France",
+            "name": "France",
+            "usd": 0.9105809506,
+            "cap": "Paris",
+            "hos": "Emmanuel Macron",
+            "eur": 1,
+            "cities": [
+                "Paris",
+                "Lyon",
+                "Marseille"
+            ],
+            "curr": "EUR",
+            "iso": "FRA"
         },
         {
-            "eur": 1,
-            "usd": 0.9103322713,
-            "cities": [
-                "Berlin",
-                "Munich",
-                "Hamburg"
-            ],
-            "hos": "Angela Merkel",
-            "cap": "Berlin",
-            "bank": "Deutsche Bundesbank",
-            "iso": "DEU",
-            "name": "Germany",
             "members": [
                 "Angela Merkel",
                 "Olaf Scholz",
                 "Jens Weidmann"
             ],
-            "curr": "EUR"
+            "bank": "Deutsche Bundesbank",
+            "name": "Germany",
+            "usd": 0.9105809506,
+            "cap": "Berlin",
+            "hos": "Angela Merkel",
+            "eur": 1,
+            "cities": [
+                "Berlin",
+                "Munich",
+                "Hamburg"
+            ],
+            "curr": "EUR",
+            "iso": "DEU"
         },
         {
-            "eur": 77.9405,
-            "usd": 70.9517523896,
-            "cities": [
-                "New Delhi",
-                "Delhi",
-                "Mumbai"
-            ],
-            "hos": "Narendra Modi",
-            "cap": "New Delhi",
-            "bank": "Reserve Bank of India",
-            "iso": "IND",
-            "name": "India",
             "members": [
                 "Narendra Modi",
                 "Nirmala Sitharaman",
                 "Shaktikanta Das"
             ],
-            "curr": "INR"
+            "bank": "Reserve Bank of India",
+            "name": "India",
+            "usd": 71.0448916409,
+            "cap": "New Delhi",
+            "hos": "Narendra Modi",
+            "eur": 78.0215,
+            "cities": [
+                "New Delhi",
+                "Delhi",
+                "Mumbai"
+            ],
+            "curr": "INR",
+            "iso": "IND"
         },
         {
-            "eur": 15472.37,
-            "usd": 14084.9977241693,
-            "cities": [
-                "Jakarta",
-                "Bekasi",
-                "Medan"
-            ],
-            "hos": "Joko Widodo",
-            "cap": "Jakarta",
-            "bank": "Bank Indonesia",
-            "iso": "IDN",
-            "name": "Indonesia",
             "members": [
                 "Joko Widodo",
                 "Sri Mulyani",
                 "Perry Warjiyo"
             ],
-            "curr": "IDR"
+            "bank": "Bank Indonesia",
+            "name": "Indonesia",
+            "usd": 14150.0,
+            "cap": "Jakarta",
+            "hos": "Joko Widodo",
+            "eur": 15539.53,
+            "cities": [
+                "Jakarta",
+                "Bekasi",
+                "Medan"
+            ],
+            "curr": "IDR",
+            "iso": "IDN"
         },
         {
-            "eur": 1,
-            "usd": 0.9103322713,
-            "cities": [
-                "Rome",
-                "Milan",
-                "Turin"
-            ],
-            "hos": "Giuseppe Conte",
-            "cap": "Rome",
-            "bank": "Bank of Italy",
-            "iso": "ITA",
-            "name": "Italy",
             "members": [
                 "Giuseppe Conte",
                 "Giovanni Tria",
                 "Ignazio Visco"
             ],
-            "curr": "EUR"
+            "bank": "Bank of Italy",
+            "name": "Italy",
+            "usd": 0.9105809506,
+            "cap": "Rome",
+            "hos": "Giuseppe Conte",
+            "eur": 1,
+            "cities": [
+                "Rome",
+                "Milan",
+                "Turin"
+            ],
+            "curr": "EUR",
+            "iso": "ITA"
         },
         {
-            "eur": 118.07,
-            "usd": 107.4829312699,
-            "cities": [
-                "Tokyo",
-                "Osaka",
-                "Nagoya"
-            ],
-            "hos": "Shinzo Abe",
-            "cap": "Tokyo",
-            "bank": "Bank of Japan",
-            "iso": "JPN",
-            "name": "Japan",
             "members": [
                 "Shinzo Abe",
                 "Taro Aso",
                 "Haruhiko Kuroda"
             ],
-            "curr": "JPY"
+            "bank": "Bank of Japan",
+            "name": "Japan",
+            "usd": 107.4485521763,
+            "cap": "Tokyo",
+            "hos": "Shinzo Abe",
+            "eur": 118.0,
+            "cities": [
+                "Tokyo",
+                "Osaka",
+                "Nagoya"
+            ],
+            "curr": "JPY",
+            "iso": "JPN"
         },
         {
-            "eur": 21.3353,
-            "usd": 19.4222121074,
-            "cities": [
-                "Mexico City",
-                "Tijuana",
-                "Puebla"
-            ],
-            "hos": "Andres Manuel Lopez Obrador",
-            "cap": "Mexico City",
-            "bank": "Bank of Mexico",
-            "iso": "MEX",
-            "name": "Mexico",
             "members": [
                 "Andres Manuel Lopez Obrador",
                 "Carlos Manuel Urzua Macias",
                 "Alejandro Diaz de Leon"
             ],
-            "curr": "MXN"
+            "bank": "Bank of Mexico",
+            "name": "Mexico",
+            "usd": 19.5836823894,
+            "cap": "Mexico City",
+            "hos": "Andres Manuel Lopez Obrador",
+            "eur": 21.5068,
+            "cities": [
+                "Mexico City",
+                "Tijuana",
+                "Puebla"
+            ],
+            "curr": "MXN",
+            "iso": "MEX"
         },
         {
-            "eur": 1315.27,
-            "usd": 1197.3327264452,
-            "cities": [
-                "Seoul",
-                "Busan",
-                "Incheon"
-            ],
-            "hos": "Moon Jae-in",
-            "cap": "Seoul",
-            "bank": "Bank of Korea",
-            "iso": "KOR",
-            "name": "Republic of Korea",
             "members": [
                 "Moon Jae-in",
                 "Hong Nam-ki",
                 "Lee Ju-yeol"
             ],
-            "curr": "KRW"
+            "bank": "Bank of Korea",
+            "name": "Republic of Korea",
+            "usd": 1200.5008195229,
+            "cap": "Seoul",
+            "hos": "Moon Jae-in",
+            "eur": 1318.39,
+            "cities": [
+                "Seoul",
+                "Busan",
+                "Incheon"
+            ],
+            "curr": "KRW",
+            "iso": "KOR"
         },
         {
-            "eur": 70.2637,
-            "usd": 63.9633136095,
-            "cities": [
-                "Moscow",
-                "St. Petersburg",
-                "Novosibirsk"
-            ],
-            "hos": "Vladimir Putin",
-            "cap": "Moscow",
-            "bank": "Bank of Russia",
-            "iso": "RUS",
-            "name": "Russia",
             "members": [
                 "Vladimir Putin",
                 "Anton Siluanov",
                 "Elvira Nabiullina"
             ],
-            "curr": "RUB"
+            "bank": "Bank of Russia",
+            "name": "Russia",
+            "usd": 64.3670551812,
+            "cap": "Moscow",
+            "hos": "Vladimir Putin",
+            "eur": 70.6879,
+            "cities": [
+                "Moscow",
+                "St. Petersburg",
+                "Novosibirsk"
+            ],
+            "curr": "RUB",
+            "iso": "RUS"
         },
         {
-            "eur": 16.3465,
-            "usd": 14.8807464725,
-            "cities": [
-                "Cape Town",
-                "Pretoria",
-                "Bloemfontein"
-            ],
-            "hos": "Cyril Ramaphosa",
-            "cap": "Cape Town",
-            "bank": "South African Reserve Bank",
-            "iso": "ZAF",
-            "name": "South Africa",
             "members": [
                 "Cyril Ramaphosa",
                 "Tito Mboweni",
                 "Lesetja Kganyago"
             ],
-            "curr": "ZAR"
+            "bank": "South African Reserve Bank",
+            "name": "South Africa",
+            "usd": 15.0323256237,
+            "cap": "Cape Town",
+            "hos": "Cyril Ramaphosa",
+            "eur": 16.5085,
+            "cities": [
+                "Cape Town",
+                "Pretoria",
+                "Bloemfontein"
+            ],
+            "curr": "ZAR",
+            "iso": "ZAF"
         },
         {
-            "eur": 6.2829,
-            "usd": 5.7195266272,
-            "cities": [
-                "Ankara",
-                "Istanbul",
-                "Izmir"
-            ],
-            "hos": "Recep Tayyip Erdogan",
-            "cap": "Ankara",
-            "bank": "Central Bank of Turkey",
-            "iso": "TUR",
-            "name": "Turkey",
             "members": [
                 "Recep Tayyip Erdogan",
                 "Berat Albayrak",
                 "Murat Cetinkaya"
             ],
-            "curr": "TRY"
+            "bank": "Central Bank of Turkey",
+            "name": "Turkey",
+            "usd": 5.7000546349,
+            "cap": "Ankara",
+            "hos": "Recep Tayyip Erdogan",
+            "eur": 6.2598,
+            "cities": [
+                "Ankara",
+                "Istanbul",
+                "Izmir"
+            ],
+            "curr": "TRY",
+            "iso": "TUR"
         },
         {
-            "eur": 0.88343,
-            "usd": 0.8042148384,
-            "cities": [
-                "London",
-                "Birmingham",
-                "Manchester"
-            ],
-            "hos": "Theresa May",
-            "cap": "London",
-            "bank": "Bank of England",
-            "iso": "GBR",
-            "name": "United Kingdom",
             "members": [
                 "Boris Johnson",
                 "Sajid Javid",
                 "Mark Carney"
             ],
-            "curr": "GBP"
+            "bank": "Bank of England",
+            "name": "United Kingdom",
+            "usd": 0.8073939173,
+            "cap": "London",
+            "hos": "Theresa May",
+            "eur": 0.88668,
+            "cities": [
+                "London",
+                "Birmingham",
+                "Manchester"
+            ],
+            "curr": "GBP",
+            "iso": "GBR"
         },
         {
-            "eur": 1.0985,
-            "usd": 1,
-            "cities": [
-                "Washington D.C.",
-                "New York",
-                "Los Angeles"
-            ],
-            "hos": "Donald Trump",
-            "cap": "Washington D.C.",
-            "bank": "Federal Reserve",
-            "iso": "USA",
-            "name": "United States of America",
             "members": [
                 "Donald Trump",
                 "Steven Mnuchin",
                 "Jerome Powell"
             ],
-            "curr": "USD"
+            "bank": "Federal Reserve",
+            "name": "United States of America",
+            "usd": 1,
+            "cap": "Washington D.C.",
+            "hos": "Donald Trump",
+            "eur": 1.0982,
+            "cities": [
+                "Washington D.C.",
+                "New York",
+                "Los Angeles"
+            ],
+            "curr": "USD",
+            "iso": "USA"
         }
     ]
 }

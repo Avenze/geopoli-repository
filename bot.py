@@ -408,8 +408,8 @@ async def portfolio(ctx):
                                 networth += u['balance'][ratelist[r]]/rates['usd'][len(rates)-1]['rates'][ratelist[r]]
                                 networth_e += u['balance'][ratelist[r]]/rates['eur'][len(rates)-1]['rates'][ratelist[r]]
                                 if u['balance'][ratelist[r]]>0:
-                                    pf += str(round(u['balance'][ratelist[r]], 2))+' '+ratelist[r]+'\n'
-                            pf += 'Networth (USD): '+str(round(networth, 2))+'\nNetworth (EUR): '+str(round(networth_e, 2))+'```'
+                                    pf += str("%.2f" % u['balance'][ratelist[r]])+' '+ratelist[r]+'\n'
+                            pf += 'Networth (USD): '+str("%.2f" % networth)+'\nNetworth (EUR): '+str("%.2f" % networth_e)+'```'
                         await ctx.send(pf)
                         return
         else:
@@ -425,6 +425,7 @@ async def buy(ctx, src:str, dest:str, amount:float):
         if valExists(ctx, 'members', ctx.message.author.id):
             with open('data/users/users'+str(ctx.guild.id)+'.json', 'r') as f:
                 data = json.load(f)
+                transac = 0
                 for u in data['users']:
                     if ctx.message.author.id == u['id']:
                         pf = '```'
@@ -441,6 +442,7 @@ async def buy(ctx, src:str, dest:str, amount:float):
                                 total_dest = u['balance'][dest]
                                 dest_rate = rates['usd'][len(rates)-1]['rates'][dest] 
                                 if total_src >= amount/dest_rate * src_rate:
+                                    transac = amount/dest_rate * src_rate
                                     u['balance'][src] -= amount/dest_rate * src_rate
                                     u['balance'][dest] += amount
                                 else:
@@ -453,7 +455,7 @@ async def buy(ctx, src:str, dest:str, amount:float):
                         os.remove('data/users/users'+str(ctx.guild.id)+'.json')
                         with open('data/users/users'+str(ctx.guild.id)+'.json', 'w') as ff:
                             json.dump(data, ff, indent=4)
-                        await ctx.send(ctx.message.author.display_name+"! Transaction success!")
+                        await ctx.send(ctx.message.author.display_name+'! Transaction success! You exchanged '+str("%.2f" % transac)+' '+src+' for '+str("%.2f" % amount)+' '+dest+'!')
                         return
         else:
             await ctx.send(ctx.message.author.display_name+'! You are currently stateless.') 
