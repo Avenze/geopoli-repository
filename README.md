@@ -22,3 +22,7 @@ Geopolitical economic Discord bot, fun
  * `.set city <nation-name> <city>`: Adds a city to your country
  * `.bank <nation-name>`: Views the financial information of a nation
  * `.economy`: Views historical financial information of the current world stage
+ * `.portfolio`: Views personal financial information
+ * `.buy <desposited-currency> <withdrawn-currency> <amount-withdrawn>`: Exchanges currency
+
+ Inpired by Misha Larionov's STONK Bot
