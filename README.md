@@ -25,4 +25,4 @@ Geopolitical economic Discord bot, fun
  * `.portfolio`: Views personal financial information
  * `.buy <desposited-currency> <withdrawn-currency> <amount-withdrawn>`: Exchanges currency
 
- Inpired by Misha Larionov's STONK Bot
+ Inspired by Misha Larionov's STONK Bot
