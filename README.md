@@ -1,6 +1,8 @@
 # Geopoli
 Geopolitical economic Discord bot, fun
 
+![Geopoli](geopoli.jpg)
+
 ## APIs used
  * Discord Py
  * European Central Bank Exchange Rates
@@ -25,4 +27,5 @@ Geopolitical economic Discord bot, fun
  * `.portfolio`: Views personal financial information
  * `.buy <desposited-currency> <withdrawn-currency> <amount-withdrawn>`: Exchanges currency
 
- Inspired by Misha Larionov's STONK Bot
+## Special Thanks
+ Inspired by Misha Larionov's STONK Bot on Slack API
