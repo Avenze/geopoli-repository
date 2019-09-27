@@ -3,7 +3,6 @@
         {
             "hos": "Scott Morrison",
             "bank": "Reserve Bank of Australia",
-            "usd": 1.477601024,
             "members": [
                 "Scott Morrison",
                 "Josh Frydenberg",
@@ -18,12 +17,12 @@
             ],
             "eur": 1.6162,
             "name": "Australia",
+            "usd": 1.477601024,
             "cap": "Canberra"
         },
         {
             "hos": "Jair Bolsonaro",
             "bank": "Central Bank of Brazil",
-            "usd": 4.1244285975,
             "members": [
                 "Jair Bolsonaro",
                 "Paulo Guedes",
@@ -38,12 +37,12 @@
             ],
             "eur": 4.5113,
             "name": "Brazil",
+            "usd": 4.1244285975,
             "cap": "Brasilia"
         },
         {
             "hos": "Justin Trudeau",
             "bank": "Bank of Canada",
-            "usd": 1.3240080453,
             "members": [
                 "Justin Trudeau",
                 "Bill Morneau",
@@ -59,12 +58,12 @@
             ],
             "eur": 1.4482,
             "name": "Canada",
+            "usd": 1.3240080453,
             "cap": "Ottawa"
         },
         {
             "hos": "Xi Jinping",
             "bank": "People's Bank of China",
-            "usd": 7.1289083928,
             "members": [
                 "Xi Jinping",
                 "Liu Kun",
@@ -79,12 +78,12 @@
             ],
             "eur": 7.7976,
             "name": "China",
+            "usd": 7.1289083928,
             "cap": "Beijing"
         },
         {
             "hos": "Emmanuel Macron",
             "bank": "Bank of France",
-            "usd": 0.9142439203,
             "members": [
                 "Emmanuel Macron",
                 "Bruno Le Maire",
@@ -99,12 +98,12 @@
             ],
             "eur": 1,
             "name": "France",
+            "usd": 0.9142439203,
             "cap": "Paris"
         },
         {
             "hos": "Angela Merkel",
             "bank": "Deutsche Bundesbank",
-            "usd": 0.9142439203,
             "members": [
                 "Angela Merkel",
                 "Olaf Scholz",
@@ -119,12 +118,12 @@
             ],
             "eur": 1,
             "name": "Germany",
+            "usd": 0.9142439203,
             "cap": "Berlin"
         },
         {
             "hos": "Narendra Modi",
             "bank": "Reserve Bank of India",
-            "usd": 70.9087584568,
             "members": [
                 "Narendra Modi",
                 "Nirmala Sitharaman",
@@ -139,12 +138,12 @@
             ],
             "eur": 77.56,
             "name": "India",
+            "usd": 70.9087584568,
             "cap": "New Delhi"
         },
         {
             "hos": "Joko Widodo",
             "bank": "Bank Indonesia",
-            "usd": 14168.0014627903,
             "members": [
                 "Joko Widodo",
                 "Sri Mulyani",
@@ -159,12 +158,12 @@
             ],
             "eur": 15496.96,
             "name": "Indonesia",
+            "usd": 14168.0014627903,
             "cap": "Jakarta"
         },
         {
             "hos": "Giuseppe Conte",
             "bank": "Bank of Italy",
-            "usd": 0.9142439203,
             "members": [
                 "Giuseppe Conte",
                 "Giovanni Tria",
@@ -179,12 +178,12 @@
             ],
             "eur": 1,
             "name": "Italy",
+            "usd": 0.9142439203,
             "cap": "Rome"
         },
         {
             "hos": "Shinzo Abe",
             "bank": "Bank of Japan",
-            "usd": 107.6339367343,
             "members": [
                 "Shinzo Abe",
                 "Taro Aso",
@@ -199,12 +198,12 @@
             ],
             "eur": 117.73,
             "name": "Japan",
+            "usd": 107.6339367343,
             "cap": "Tokyo"
         },
         {
             "hos": "Andres Manuel Lopez Obrador",
             "bank": "Bank of Mexico",
-            "usd": 19.5625342841,
             "members": [
                 "Andres Manuel Lopez Obrador",
                 "Carlos Manuel Urzua Macias",
@@ -219,12 +218,12 @@
             ],
             "eur": 21.3975,
             "name": "Mexico",
+            "usd": 19.5625342841,
             "cap": "Mexico City"
         },
         {
             "hos": "Moon Jae-in",
             "bank": "Bank of Korea",
-            "usd": 1201.2342292924,
             "members": [
                 "Moon Jae-in",
                 "Hong Nam-ki",
@@ -239,12 +238,12 @@
             ],
             "eur": 1313.91,
             "name": "Republic of Korea",
+            "usd": 1201.2342292924,
             "cap": "Seoul"
         },
         {
             "hos": "Vladimir Putin",
             "bank": "Bank of Russia",
-            "usd": 64.197293838,
             "members": [
                 "Vladimir Putin",
                 "Anton Siluanov",
@@ -259,12 +258,12 @@
             ],
             "eur": 70.219,
             "name": "Russia",
+            "usd": 64.197293838,
             "cap": "Moscow"
         },
         {
             "hos": "Cyril Ramaphosa",
             "bank": "South African Reserve Bank",
-            "usd": 14.968275736,
             "members": [
                 "Cyril Ramaphosa",
                 "Tito Mboweni",
@@ -279,12 +278,12 @@
             ],
             "eur": 16.3723,
             "name": "South Africa",
+            "usd": 14.968275736,
             "cap": "Cape Town"
         },
         {
             "hos": "Recep Tayyip Erdogan",
             "bank": "Central Bank of Turkey",
-            "usd": 5.6590784421,
             "members": [
                 "Recep Tayyip Erdogan",
                 "Berat Albayrak",
@@ -299,12 +298,12 @@
             ],
             "eur": 6.1899,
             "name": "Turkey",
+            "usd": 5.6590784421,
             "cap": "Ankara"
         },
         {
             "hos": "Theresa May",
             "bank": "Bank of England",
-            "usd": 0.8091515816,
             "members": [
                 "Boris Johnson",
                 "Sajid Javid",
@@ -319,12 +318,12 @@
             ],
             "eur": 0.88505,
             "name": "United Kingdom",
+            "usd": 0.8091515816,
             "cap": "London"
         },
         {
             "hos": "Donald Trump",
             "bank": "Federal Reserve",
-            "usd": 1,
             "members": [
                 "Donald Trump",
                 "Steven Mnuchin",
@@ -339,6 +338,7 @@
             ],
             "eur": 1.0938,
             "name": "United States of America",
+            "usd": 1,
             "cap": "Washington D.C."
         }
     ]

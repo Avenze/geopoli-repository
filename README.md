@@ -10,6 +10,7 @@ Geopolitical economic Discord bot, fun
 
 ## Commands
  * `.help`: Gets a full list of command instructions
+ * `.dawn`: Begins the world
  * `.establish <nation-name>`: Establishes a new nation
  * `.join <nation-name>`: Joins an existing nation
  * `.leave <nation-name>`: Leaves current nation
@@ -24,6 +25,7 @@ Geopolitical economic Discord bot, fun
  * `.set city <nation-name> <city>`: Adds a city to your country
  * `.bank <nation-name>`: Views the financial information of a nation
  * `.economy`: Views historical financial information of the current world stage
+ * `.register`: Opens a financial account
  * `.portfolio`: Views personal financial information
  * `.buy <desposited-currency> <withdrawn-currency> <amount-withdrawn>`: Exchanges currency
 
