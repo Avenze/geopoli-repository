@@ -5,10 +5,10 @@ import datetime
 import os
 from matplotlib import pyplot as plt
 import pandas as pd
-from exch import getExchangeRatesUSD, getExchangeRatesEUR
+from imports.api.exch import getExchangeRatesUSD, getExchangeRatesEUR
 
 def updateRates():
-    with open('botnations.json', 'r') as f:
+    with open('data/botnations.json', 'r') as f:
         data = json.load(f)
         usd_rates = getExchangeRatesUSD()
         eur_rates = getExchangeRatesEUR()
@@ -20,26 +20,26 @@ def updateRates():
             if n['curr'] in eur_rates['rates'].keys():
                 n['eur'] = eur_rates['rates'][n['curr']]
         f.close()
-        for filename in os.listdir('data'):
-            if filename.endswith('.json'):
-                with open('data/'+filename, 'r') as f:
+        for filename in os.listdir('game'):
+            if filename.endswith('.json') and 'data' in filename:
+                with open('game/'+filename, 'r') as f:
                     gamedata = json.load(f)
                     for n in range(len(gamedata['nations'])):
                         for bot in data['botnations']:
                             if gamedata['nations'][n]['iso'] == bot['iso']:
                                 gamedata['nations'][n]['usd'] = bot['usd']
                                 gamedata['nations'][n]['eur'] = bot['eur']
-                with open('data/'+filename, 'w') as f:
+                with open('game/'+filename, 'w') as f:
                     json.dump(gamedata, f, indent=4)
-        with open('botnations-backup.json', 'w') as f:
+        with open('data/botnations-backup.json', 'w') as f:
             json.dump(data, f, indent=4)
-        os.remove('botnations.json')
-        with open('botnations.json', 'w') as f:
+        os.remove('data/botnations.json')
+        with open('data/botnations.json', 'w') as f:
             json.dump(data, f, indent=4)
         print(datetime.datetime.now(), '- Rates updated')
 
 def recordRates():
-    with open('dataRecord.json', 'r') as f:
+    with open('data/dataRecord.json', 'r') as f:
         hist = json.load(f)
         usd_rates = getExchangeRatesUSD()
         eur_rates = getExchangeRatesEUR()
@@ -114,17 +114,18 @@ def recordRates():
 
             plt.suptitle('Currency exchange rates ('+bases[i]+')', fontsize=13, fontweight=0, color='black', style='italic', y=1.02)
 
-            if os.path.exists('img/rates'+str(i)+'.png'):
-                os.remove('img/rates'+str(i)+'.png')
-            plt.savefig('img/rates'+str(i)+'.png')
+            if os.path.exists('resources/img/rates'+str(i)+'.png'):
+                os.remove('resources/img/rates'+str(i)+'.png')
+            plt.savefig('resources/img/rates'+str(i)+'.png')
             i += 1
 
             plt.close()
 
-        with open('dataRecord-backup.json', 'w') as f:
+        f.close()
+        with open('data/dataRecord-backup.json', 'w') as f:
             json.dump(hist, f, indent=4)
-        os.remove('dataRecord.json')
-        with open('dataRecord.json', 'w') as f:
+        os.remove('data/dataRecord.json')
+        with open('data/dataRecord.json', 'w') as f:
             json.dump(hist, f, indent=4)
         print(datetime.datetime.now(), '- Rates recorded (.-.)')
 

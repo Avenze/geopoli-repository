@@ -1,7 +1,7 @@
 # Geopoli
 Geopolitical economic Discord bot, fun
 
-![Geopoli](geopoli.jpg)
+![Geopoli](resources/img/geopoli.jpg)
 
 ## APIs used
  * Discord Py
