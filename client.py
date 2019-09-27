@@ -426,10 +426,10 @@ async def portfolio(ctx):
                             rates = json.load(rf)
                             networth = 0
                             networth_e = 0
-                            ratelist = list(rates['usd'][len(rates)-1]['rates'].keys())
+                            ratelist = list(rates['usd'][len(rates['usd'])-1]['rates'].keys())
                             for r in range(len(ratelist)):
-                                networth += u['balance'][ratelist[r]]/rates['usd'][len(rates)-1]['rates'][ratelist[r]]
-                                networth_e += u['balance'][ratelist[r]]/rates['eur'][len(rates)-1]['rates'][ratelist[r]]
+                                networth += u['balance'][ratelist[r]]/rates['usd'][len(rates['usd'])-1]['rates'][ratelist[r]]
+                                networth_e += u['balance'][ratelist[r]]/rates['eur'][len(rates['eur'])-1]['rates'][ratelist[r]]
                                 if u['balance'][ratelist[r]]>0:
                                     pf += str("%.2f" % u['balance'][ratelist[r]])+' '+ratelist[r]+'\n'
                             pf += 'Networth (USD): '+str("%.2f" % networth)+'\nNetworth (EUR): '+str("%.2f" % networth_e)+'```'
@@ -462,9 +462,9 @@ async def buy(ctx, src:str, dest:str, amount:float):
                             rates = json.load(rf)
                             if src in list(u['balance'].keys()) and dest in list(u['balance'].keys()):
                                 total_src = u['balance'][src]
-                                src_rate = rates['usd'][len(rates)-1]['rates'][src]
+                                src_rate = rates['usd'][len(rates['usd'])-1]['rates'][src]
                                 total_dest = u['balance'][dest]
-                                dest_rate = rates['usd'][len(rates)-1]['rates'][dest] 
+                                dest_rate = rates['usd'][len(rates['usd'])-1]['rates'][dest] 
                                 if total_src >= amount/dest_rate * src_rate:
                                     transac = amount/dest_rate * src_rate
                                     u['balance'][src] -= amount/dest_rate * src_rate

@@ -42,16 +42,18 @@ def recordRates():
     with open('data/dataRecord.json', 'r') as f:
         hist = json.load(f)
         usd_rates = getExchangeRatesUSD()
+        usd_rates['usd'] = 1
         eur_rates = getExchangeRatesEUR()
+        eur_rates['eur'] = 1
         hist['usd'].append(usd_rates)
         hist['eur'].append(eur_rates)
 
         usd_rate_dict = {
-            'CNY':[], 'RUB':[], 'MXN':[], 'TRY':[], 'USD':[], 'EUR':[], 'INR':[], 'GBP':[], 
+            'CNY':[], 'RUB':[], 'MXN':[], 'TRY':[], 'EUR':[], 'INR':[], 'GBP':[], 
             'KRW':[], 'BRL':[], 'ZAR':[], 'AUD':[], 'JPY':[], 'CAD':[], 'IDR':[]
         }
         eur_rate_dict = {
-            'CNY':[], 'RUB':[], 'MXN':[], 'TRY':[], 'USD':[], 'EUR':[], 'INR':[], 'GBP':[], 
+            'CNY':[], 'RUB':[], 'MXN':[], 'TRY':[], 'USD':[], 'INR':[], 'GBP':[], 
             'KRW':[], 'BRL':[], 'ZAR':[], 'AUD':[], 'JPY':[], 'CAD':[], 'IDR':[]
         }
 
@@ -59,13 +61,11 @@ def recordRates():
             for r in range(len(hist['usd'][i]['rates'])):
                 rate = hist['usd'][i]['rates']
                 usd_rate_dict[list(rate.keys())[r]].append(rate[list(rate.keys())[r]])
-        usd_rate_dict['USD'].append(1)
         
         for i in range(len(hist['eur'])):
             for r in range(len(hist['eur'][i]['rates'])):
                 rate = hist['eur'][i]['rates']
                 eur_rate_dict[list(rate.keys())[r]].append(rate[list(rate.keys())[r]])
-        eur_rate_dict['EUR'].append(1)
         
         dfs = [
             pd.DataFrame({
