@@ -58,14 +58,16 @@ def recordRates():
         }
 
         for i in range(len(hist['usd'])):
+            rate = hist['usd'][i]['rates']
             for r in range(len(hist['usd'][i]['rates'])):
-                rate = hist['usd'][i]['rates']
-                usd_rate_dict[list(rate.keys())[r]].append(rate[list(rate.keys())[r]])
+                if list(rate.keys())[r] in usd_rate_dict:
+                    usd_rate_dict[list(rate.keys())[r]].append(rate[list(rate.keys())[r]])
         
         for i in range(len(hist['eur'])):
+            rate = hist['eur'][i]['rates']
             for r in range(len(hist['eur'][i]['rates'])):
-                rate = hist['eur'][i]['rates']
-                eur_rate_dict[list(rate.keys())[r]].append(rate[list(rate.keys())[r]])
+                if list(rate.keys())[r] in eur_rate_dict:
+                    eur_rate_dict[list(rate.keys())[r]].append(rate[list(rate.keys())[r]])
         
         dfs = [
             pd.DataFrame({
