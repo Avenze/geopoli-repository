@@ -443,7 +443,7 @@ async def portfolio(ctx):
                                 if u['balance'][ratelist[r]]>0:
                                     listed.append(str("%.2f" % u['balance'][ratelist[r]])+' '+ratelist[r])
                             for li in range(len(listed)):
-                                pf += listed[li]+' ('+str(curr_values[li]//networth)+'%)\n'
+                                pf += listed[li]+' ('+str(int(100*curr_values[li]/networth))+'%)\n'
                             pf += 'Networth (USD): '+str("%.2f" % networth)+'\nNetworth (EUR): '+str("%.2f" % networth_e)+'```'
                         await ctx.send(pf)
                         return
