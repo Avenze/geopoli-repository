@@ -1,6 +1,7 @@
 import dbl
 import discord
 from discord.ext import commands
+from auth import api_token
 
 import asyncio
 import logging
@@ -11,7 +12,7 @@ class DiscordBotsOrgAPI(commands.Cog):
 
     def __init__(self, bot):
         self.bot = bot
-        self.token = 'dbl_token' # set this to your DBL token
+        self.token = api_token
         self.dblpy = dbl.Client(self.bot, self.token)
         self.updating = self.bot.loop.create_task(self.update_stats())
 
