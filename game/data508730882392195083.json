@@ -75,8 +75,7 @@
             "members": [
                 "Xi Jinping",
                 "Liu Kun",
-                "Yi Gang",
-                492435232071483392
+                "Yi Gang"
             ],
             "name": "China",
             "curr": "CNY"
@@ -176,8 +175,7 @@
             "members": [
                 "Giuseppe Conte",
                 "Giovanni Tria",
-                "Ignazio Visco",
-                251519506269077504
+                "Ignazio Visco"
             ],
             "name": "Italy",
             "curr": "EUR"
@@ -197,7 +195,8 @@
             "members": [
                 "Shinzo Abe",
                 "Taro Aso",
-                "Haruhiko Kuroda"
+                "Haruhiko Kuroda",
+                210802688181534720
             ],
             "name": "Japan",
             "curr": "JPY"
@@ -257,7 +256,8 @@
             "members": [
                 "Vladimir Putin",
                 "Anton Siluanov",
-                "Elvira Nabiullina"
+                "Elvira Nabiullina",
+                492435232071483392
             ],
             "name": "Russia",
             "curr": "RUB"
@@ -341,33 +341,6 @@
             ],
             "name": "United States of America",
             "curr": "USD"
-        },
-        {
-            "bank": "Bank of Anime",
-            "cities": [
-                "Animeville"
-            ],
-            "cap": "Animeville",
-            "hos": 217135788922634242,
-            "iso": "AIE",
-            "members": [
-                217135788922634242
-            ],
-            "name": "Anime"
-        },
-        {
-            "bank": "Bank of Persia",
-            "cities": [
-                "Persiagrad"
-            ],
-            "cap": "Persiagrad",
-            "hos": 229064601558319104,
-            "iso": "PSA",
-            "members": [
-                229064601558319104,
-                127991777935360000
-            ],
-            "name": "Persia"
         }
     ]
 }
