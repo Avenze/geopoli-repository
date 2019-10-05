@@ -380,8 +380,8 @@ async def icon(ctx):
 @bot.command()
 async def economy(ctx):
     bases = ['USD', 'N', 'EUR', 'N']
+    await ctx.send('WORLD ECONOMY')
     for i in range(4):
-        await ctx.send('WORLD ECONOMY')
         with open('resources/img/rates'+str(i)+'.png', 'rb') as picture:
             if bases[i] == 'N':
                 await ctx.send(file=discord.File(picture, bases[i-1]+'.png'))
