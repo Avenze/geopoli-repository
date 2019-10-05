@@ -460,7 +460,7 @@ async def calc(ctx, src:str, dest:str, amount:float):
     if os.path.exists('game/data'+str(ctx.guild.id)+'.json'):
         with open('data/dataRecord.json', 'r') as rf:
             rates = json.load(rf)
-            if (src in list(rates['usd'][len(rates['usd'])-1]['rates'].keys()) or src == 'USD') and (dest in list(rates['usd'][len(rates['usd'])-1]['rates'].keys()) or dest == 'USD')):
+            if (src in list(rates['usd'][len(rates['usd'])-1]['rates'].keys()) or src == 'USD') and (dest in list(rates['usd'][len(rates['usd'])-1]['rates'].keys()) or dest == 'USD'):
                 if src != 'USD':
                     src_rate = rates['usd'][len(rates['usd'])-1]['rates'][src]
                 else:
