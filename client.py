@@ -440,10 +440,10 @@ async def portfolio(ctx):
                                     networth_e += u['balance'][ratelist[r]]/rates['eur'][len(rates['eur'])-1]['rates'][ratelist[r]]
                                 else:
                                     networth_e += u['balance'][ratelist[r]]
-                                if u['balance'][ratelist[r]]>0:
-                                    listed.append(str("%.2f" % u['balance'][ratelist[r]])+' '+ratelist[r])
+                                listed.append(str("%.2f" % u['balance'][ratelist[r]])+' '+ratelist[r])
                             for li in range(len(listed)):
-                                pf += listed[li]+' ('+str(int(100*curr_values[li]/networth))+'%)\n'
+                                if curr_values[li]>0:
+                                    pf += listed[li]+' ('+str(int(100*curr_values[li]/networth))+'%)\n'
                             pf += 'Networth (USD): '+str("%.2f" % networth)+'\nNetworth (EUR): '+str("%.2f" % networth_e)+'```'
                         await ctx.send(pf)
                         return
@@ -460,8 +460,7 @@ async def calc(ctx, src:str, dest:str, amount:float):
     if os.path.exists('game/data'+str(ctx.guild.id)+'.json'):
         with open('data/dataRecord.json', 'r') as rf:
             rates = json.load(rf)
-            if src in list(rates['usd'][len(rates['usd'])-1]['rates'].keys()) and dest in list(rates['usd'][len(rates['usd'])-1]['rates'].keys()):
-                total_src = u['balance'][src]
+            if (src in list(rates['usd'][len(rates['usd'])-1]['rates'].keys()) or src == 'USD') and (dest in list(rates['usd'][len(rates['usd'])-1]['rates'].keys() or dest == 'USD')):
                 if src != 'USD':
                     src_rate = rates['usd'][len(rates['usd'])-1]['rates'][src]
                 else:
@@ -472,9 +471,9 @@ async def calc(ctx, src:str, dest:str, amount:float):
                     dest_rate = 1
                 transac = amount/dest_rate * src_rate
             else:
-                await ctx.send('Error in processing request: one of those currencies is non-existent.')
+                await ctx.send('Error in processing calculation: one of those currencies is non-existent.')
                 return
-        await ctx.send(str("%.2f" % transac)+' '+src+' is '+str("%.2f" % amount)+' '+dest+'.')
+        await ctx.send(str("%.2f" % amount)+' '+dest+' is '+str("%.2f" % transac)+' '+src+'.')
         return
     else:
         await ctx.send(ctx.message.author.display_name+'! Civilization has yet to be dawned.')
