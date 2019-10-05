@@ -426,18 +426,56 @@ async def portfolio(ctx):
                             rates = json.load(rf)
                             networth = 0
                             networth_e = 0
-                            ratelist = list(rates['usd'][len(rates['usd'])-1]['rates'].keys())
+                            ratelist = list(u['balance'].keys())
+                            listed = []
+                            curr_values = []
                             for r in range(len(ratelist)):
-                                networth += u['balance'][ratelist[r]]/rates['usd'][len(rates['usd'])-1]['rates'][ratelist[r]]
-                                networth_e += u['balance'][ratelist[r]]/rates['eur'][len(rates['eur'])-1]['rates'][ratelist[r]]
+                                if ratelist[r] != 'USD':
+                                    networth += u['balance'][ratelist[r]]/rates['usd'][len(rates['usd'])-1]['rates'][ratelist[r]]
+                                    curr_values.append(u['balance'][ratelist[r]]/rates['usd'][len(rates['usd'])-1]['rates'][ratelist[r]])
+                                else:
+                                    networth += u['balance'][ratelist[r]]
+                                    curr_values.append(u['balance'][ratelist[r]])
+                                if ratelist[r] != 'EUR':
+                                    networth_e += u['balance'][ratelist[r]]/rates['eur'][len(rates['eur'])-1]['rates'][ratelist[r]]
+                                else:
+                                    networth_e += u['balance'][ratelist[r]]
                                 if u['balance'][ratelist[r]]>0:
-                                    pf += str("%.2f" % u['balance'][ratelist[r]])+' '+ratelist[r]+'\n'
+                                    listed.append(str("%.2f" % u['balance'][ratelist[r]])+' '+ratelist[r])
+                            for li in range(len(listed)):
+                                pf += listed[li]+' ('+str(curr_values[li]//networth)+'%)\n'
                             pf += 'Networth (USD): '+str("%.2f" % networth)+'\nNetworth (EUR): '+str("%.2f" % networth_e)+'```'
                         await ctx.send(pf)
                         return
                 await ctx.send(ctx.message.author.display_name+'! You do not have a bank account. If you joined this server after this bot was added, you need to use `.register` to open a financial portfolio.') 
         else:
             await ctx.send(ctx.message.author.display_name+'! You are currently stateless.')
+    else:
+        await ctx.send(ctx.message.author.display_name+'! Civilization has yet to be dawned.')
+
+@bot.command()
+async def calc(ctx, src:str, dest:str, amount:float):
+    src = src.upper()
+    dest = dest.upper()
+    if os.path.exists('game/data'+str(ctx.guild.id)+'.json'):
+        with open('data/dataRecord.json', 'r') as rf:
+            rates = json.load(rf)
+            if src in list(rates['usd'][len(rates['usd'])-1]['rates'].keys()) and dest in list(rates['usd'][len(rates['usd'])-1]['rates'].keys()):
+                total_src = u['balance'][src]
+                if src != 'USD':
+                    src_rate = rates['usd'][len(rates['usd'])-1]['rates'][src]
+                else:
+                    src_rate = 1
+                if dest != 'USD':
+                    dest_rate = rates['usd'][len(rates['usd'])-1]['rates'][dest] 
+                else:
+                    dest_rate = 1
+                transac = amount/dest_rate * src_rate
+            else:
+                await ctx.send('Error in processing request: one of those currencies is non-existent.')
+                return
+        await ctx.send(str("%.2f" % transac)+' '+src+' is '+str("%.2f" % amount)+' '+dest+'.')
+        return
     else:
         await ctx.send(ctx.message.author.display_name+'! Civilization has yet to be dawned.')
 
@@ -452,19 +490,19 @@ async def buy(ctx, src:str, dest:str, amount:float):
                 transac = 0
                 for u in data['users']:
                     if ctx.message.author.id == u['id']:
-                        pf = '```'
-                        with open('game/data'+str(ctx.guild.id)+'.json', 'r') as nf:
-                            nations = json.load(nf)
-                            for n in nations['nations']:
-                                if ctx.message.author.id in n['members']:
-                                    pf += ctx.message.author.display_name.upper()+', '+n['bank'].upper()+'\n'
                         with open('data/dataRecord.json', 'r') as rf:
                             rates = json.load(rf)
                             if src in list(u['balance'].keys()) and dest in list(u['balance'].keys()):
                                 total_src = u['balance'][src]
-                                src_rate = rates['usd'][len(rates['usd'])-1]['rates'][src]
+                                if src != 'USD':
+                                    src_rate = rates['usd'][len(rates['usd'])-1]['rates'][src]
+                                else:
+                                    src_rate = 1
                                 total_dest = u['balance'][dest]
-                                dest_rate = rates['usd'][len(rates['usd'])-1]['rates'][dest] 
+                                if dest != 'USD':
+                                    dest_rate = rates['usd'][len(rates['usd'])-1]['rates'][dest] 
+                                else:
+                                    dest_rate = 1
                                 if total_src >= amount/dest_rate * src_rate:
                                     transac = amount/dest_rate * src_rate
                                     u['balance'][src] -= amount/dest_rate * src_rate

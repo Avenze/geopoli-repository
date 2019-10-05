@@ -4,13 +4,19 @@ Geopolitical economic Discord bot, fun
 ![Geopoli](resources/img/geopoli.jpg)
 
 ## APIs used
- * Discord Py
+ * discord.py
  * European Central Bank Exchange Rates
  * Wikipedia
 
 ## Commands
  * `.help`: Gets a full list of command instructions
  * `.dawn`: Begins the world
+  * `.bank <nation-name>`: Views the financial information of a nation
+ * `.economy`: Views historical financial information of the current world stage
+ * `.register`: Opens a financial account
+ * `.portfolio`: Views personal financial information
+ * `.calc <desposited-currency> <withdrawn-currency> <amount-withdrawn>`: Calculates exchange
+ * `.buy <desposited-currency> <withdrawn-currency> <amount-withdrawn>`: Exchanges currency
  * `.establish <nation-name>`: Establishes a new nation
  * `.join <nation-name>`: Joins an existing nation
  * `.leave <nation-name>`: Leaves current nation
@@ -23,11 +29,6 @@ Geopolitical economic Discord bot, fun
  * `.set iso <nation-name> <iso>`: Change nation ISO code
  * `.set capital <nation-name> <city>`: Change nation capital city
  * `.set city <nation-name> <city>`: Adds a city to your country
- * `.bank <nation-name>`: Views the financial information of a nation
- * `.economy`: Views historical financial information of the current world stage
- * `.register`: Opens a financial account
- * `.portfolio`: Views personal financial information
- * `.buy <desposited-currency> <withdrawn-currency> <amount-withdrawn>`: Exchanges currency
 
 ## Special Thanks
  Inspired by Misha Larionov's STONK Bot on Slack API

@@ -55,8 +55,7 @@
             "members": [
                 "Justin Trudeau",
                 "Bill Morneau",
-                "Stephen Poloz",
-                492435232071483392
+                "Stephen Poloz"
             ],
             "name": "Canada",
             "curr": "CAD"
@@ -340,6 +339,19 @@
             ],
             "name": "United States of America",
             "curr": "USD"
+        },
+        {
+            "bank": "Bank of Volexec",
+            "cities": [
+                "Volexectown"
+            ],
+            "cap": "Volexectown",
+            "hos": 382288739126476802,
+            "iso": "VE",
+            "members": [
+                382288739126476802
+            ],
+            "name": "Volexec"
         }
     ]
 }
