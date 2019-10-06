@@ -1,7 +1,6 @@
 import dbl
 import discord
 from discord.ext import commands
-from auth import api_token
 
 import asyncio
 import logging
@@ -10,9 +9,9 @@ import logging
 class DiscordBotsOrgAPI(commands.Cog):
     """Handles interactions with the top.gg API"""
 
-    def __init__(self, bot):
+    def __init__(self, bot, token):
         self.bot = bot
-        self.token = api_token
+        self.token = token
         self.dblpy = dbl.Client(self.bot, self.token)
         self.updating = self.bot.loop.create_task(self.update_stats())
 
@@ -27,7 +26,7 @@ class DiscordBotsOrgAPI(commands.Cog):
                 logger.exception('Failed to post server count\n{}: {}'.format(type(e).__name__, e))
             await asyncio.sleep(1800)
 
-def setup(bot):
+def setup(bot, token):
     global logger
     logger = logging.getLogger('bot')
-    bot.add_cog(DiscordBotsOrgAPI(bot))
+    bot.add_cog(DiscordBotsOrgAPI(bot, token))

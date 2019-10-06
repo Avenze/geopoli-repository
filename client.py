@@ -3,7 +3,8 @@ from discord.ext import commands
 import os
 import random
 import json
-from auth import token
+from auth import token, api_token
+from imports.api.dblapi import setup
 from imports.format import titleCase, setISO, numbered
 from imports.api import wiki
 from imports.api.exch import getExchangeRatesUSD, getExchangeRatesEUR
@@ -568,3 +569,4 @@ async def on_ready():
     print('------')
 
 bot.run(token)
+setup(bot, api_token)
