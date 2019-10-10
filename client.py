@@ -387,7 +387,7 @@ async def bank(ctx, nation:str):
                                                 networth_e += u['balance'][ratelist[r]]
                                         total += networth
                                         total_e += networth_e
-                        stage += 'National net worth (USD): '+str("%.2f" % total)+'\Total wealth (EUR): '+str("%.2f" % total_e)+'```'
+                        stage += 'National net worth (USD): '+str("%.2f" % total)+'\nNational net worth (EUR): '+str("%.2f" % total_e)+'```'
                         await ctx.send(stage)
                         return
             await ctx.send(ctx.message.author.display_name+'! This nation does not exist.') 
