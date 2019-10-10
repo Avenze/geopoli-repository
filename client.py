@@ -304,6 +304,19 @@ async def set(ctx, item:str, nation:str, content:str):
                             await ctx.send(ctx.message.author.display_name+' changed the capital city.')
                             return
                 await ctx.send(ctx.message.author.display_name+'! You are not the Head of State of that nation.')
+            elif item == 'bank':
+                with open('game/data'+str(ctx.guild.id)+'.json', 'r') as f:
+                    data = json.load(f)
+                    for n in data['nations']:
+                        if n['name'] == titleCase(nation) and n['hos'] == ctx.message.author.id:
+                            n['bank'] = titleCase(content)
+                            f.close()
+                            os.remove('game/data'+str(ctx.guild.id)+'.json')
+                            with open('game/data'+str(ctx.guild.id)+'.json', 'w') as f:
+                                json.dump(data, f, indent=4)
+                            await ctx.send(ctx.message.author.display_name+' changed the central bank.')
+                            return
+                await ctx.send(ctx.message.author.display_name+'! You are not the Head of State of that nation.')
             elif item == 'city':
                 with open('game/data'+str(ctx.guild.id)+'.json', 'r') as f:
                     data = json.load(f)
