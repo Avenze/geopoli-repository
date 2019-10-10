@@ -566,7 +566,7 @@ async def help(ctx):
 
 @bot.event
 async def on_ready():
-    await bot.change_presence(activity=discord.Game(name="with the economy"))
+    await bot.change_presence(activity=discord.Game(name="with the economy | .help"))
     print('Logged in as')
     print(bot.user.name)
     print(bot.user.id)
