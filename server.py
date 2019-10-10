@@ -131,7 +131,7 @@ def recordRates():
             json.dump(hist, f, indent=4)
         print(datetime.datetime.now(), '- Rates recorded (.-.)')
 
-schedule.every().minutes.do(updateRates)
+schedule.every(6).hours.do(updateRates)
 schedule.every().day.at('00:00').do(recordRates) 
 
 print('Running server')
