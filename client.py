@@ -366,7 +366,9 @@ async def bank(ctx, nation:str):
                 data = json.load(f)
                 for n in data['nations']:
                     if n['name'] == titleCase(nation):
-                        stage = '```'+n['bank']+'\n1 USD is '+str(n['usd'])+' '+n['curr']+'.\n1 EUR is '+str(n['eur'])+' '+n['curr']+'\n'
+                        stage = '```'+n['bank']+'\n'
+                        if 'usd' in n and 'eur' in n and 'curr' in n:
+                            stage += '1 USD is '+str(n['usd'])+' '+n['curr']+'.\n1 EUR is '+str(n['eur'])+' '+n['curr']+'\n'
                         with open('game/users'+str(ctx.guild.id)+'.json', 'r') as f:
                             data = json.load(f)
                             for u in data['users']:
