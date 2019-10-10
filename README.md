@@ -27,6 +27,7 @@ Geopolitical economic Discord bot, fun
  * `.cities <nation-name>`: Lists the cities of a nation in chronological order
  * `.set description <nation-name> <description>`: Change nation description
  * `.set iso <nation-name> <iso>`: Change nation ISO code
+ * `.set bank <nation-name> <bank-name>`: Change nation central bank
  * `.set capital <nation-name> <city>`: Change nation capital city
  * `.set city <nation-name> <city>`: Adds a city to your country
 

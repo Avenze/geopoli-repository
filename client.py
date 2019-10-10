@@ -180,6 +180,7 @@ async def profile(ctx, nation:str):
                         embed.add_field(name="Head of State", value=idToName(ctx, n['hos']), inline=False)
                         embed.add_field(name="Capital City", value=n['cap'], inline=False)
                         embed.add_field(name="ISO Code", value=n['iso'], inline=False)
+                        embed.add_field(name="Bank", value=n['bank'], inline=False)
                         embed.add_field(name="Population", value=str(len(n['members']))+'; use `.citizens "'+titleCase(nation)+'"` to see citizens', inline=False)
                         embed.add_field(name="Cities", value=str(len(n['cities']))+'; use `.cities "'+titleCase(nation)+'"` to see cities', inline=False)
                         await ctx.send(embed=embed)
