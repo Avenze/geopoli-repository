@@ -24,7 +24,7 @@ class DiscordBotsOrgAPI(commands.Cog):
                 logger.info('Posted server count ({})'.format(self.dblpy.guild_count()))
             except Exception as e:
                 logger.exception('Failed to post server count\n{}: {}'.format(type(e).__name__, e))
-            await asyncio.sleep(10)
+            await asyncio.sleep(1800)
 
 def setup(bot, token):
     global logger
