@@ -359,13 +359,36 @@ async def passport(ctx):
 async def bank(ctx, nation:str):
     if os.path.exists('game/data'+str(ctx.guild.id)+'.json'):
         try:
+            total = 0
+            total_e = 0
             stage = ''
             with open('game/data'+str(ctx.guild.id)+'.json', 'r') as f:
                 data = json.load(f)
                 for n in data['nations']:
                     if n['name'] == titleCase(nation):
-                        stage = '```'+n['bank']+'\n1 USD is '+str(n['usd'])+' '+n['curr']+'.\n1 EUR is '+str(n['eur'])+' '+n['curr']+'```'
-                        await ctx.send(stage) 
+                        stage = '```'+n['bank']+'\n1 USD is '+str(n['usd'])+' '+n['curr']+'.\n1 EUR is '+str(n['eur'])+' '+n['curr']+'\n'
+                        with open('game/users'+str(ctx.guild.id)+'.json', 'r') as f:
+                            data = json.load(f)
+                            for u in data['users']:
+                                if u['id'] in n['members']:
+                                    with open('data/dataRecord.json', 'r') as rf:
+                                        rates = json.load(rf)
+                                        networth = 0
+                                        networth_e = 0
+                                        ratelist = list(u['balance'].keys())
+                                        for r in range(len(ratelist)):
+                                            if ratelist[r] != 'USD':
+                                                networth += u['balance'][ratelist[r]]/rates['usd'][len(rates['usd'])-1]['rates'][ratelist[r]]
+                                            else:
+                                                networth += u['balance'][ratelist[r]]
+                                            if ratelist[r] != 'EUR':
+                                                networth_e += u['balance'][ratelist[r]]/rates['eur'][len(rates['eur'])-1]['rates'][ratelist[r]]
+                                            else:
+                                                networth_e += u['balance'][ratelist[r]]
+                                        total += networth
+                                        total_e += networth_e
+                        stage += 'National net worth (USD): '+str("%.2f" % total)+'\Total wealth (EUR): '+str("%.2f" % total_e)+'```'
+                        await ctx.send(stage)
                         return
             await ctx.send(ctx.message.author.display_name+'! This nation does not exist.') 
         except ValueError:
