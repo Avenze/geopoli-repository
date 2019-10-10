@@ -532,6 +532,10 @@ async def buy(ctx, src:str, dest:str, amount:float):
 async def ping(ctx):
     await ctx.send('pong')
 
+@bot.command()
+async def support(ctx):
+    await ctx.send('Please support this bot by voting for it on Discord Bot List: https://top.gg/bot/600823440802316288/vote')
+
 bot.remove_command('help')
 
 @bot.command()
